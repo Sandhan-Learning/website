@@ -1,0 +1,8 @@
+body {
+	overflow: hidden;
+}
+
+.swiper-container {
+	overflow: visible;
+	width: 95vw;
+}
