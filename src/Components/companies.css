@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i");
+
+.sect {
+	padding: 90px 0;
+	position: relative;
+}
+
+.sect--no-padding {
+	padding-top: 0;
+}
+
+.row--center {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.partner_img {
+	width: 160px;
+	opacity: 0.5;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+	-o-transition: all 0.4s;
+}
+
+.partner_img:hover {
+	transform: scale(1.08, 1.08);
+	opacity: 0.9;
+}
