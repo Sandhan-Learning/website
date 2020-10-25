@@ -1,8 +1,7 @@
-body {
-	overflow: hidden;
+.swiper-container {
+	width: 100%;
 }
 
-.swiper-container {
-	overflow: visible;
-	width: 95vw;
+.swiper-button-prev {
+	padding-left: 33px;
 }

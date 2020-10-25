@@ -1,6 +1,22 @@
 import React from "react";
-import "./testimonial-card-container.css";
-import TestimonialCard from "./TestimonialCard";
+import "./testimonial-card.css";
+import SwiperCore, {
+	Navigation,
+	Pagination,
+	Scrollbar,
+	A11y,
+	Autoplay,
+} from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/components/scrollbar/scrollbar.scss";
+
+// install Swiper components
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const testimonyData = [
 	{
@@ -19,44 +35,65 @@ const testimonyData = [
 	},
 ];
 
-class TestimonialCardContainer extends React.Component {
-	constructor() {
-		super();
-		this.bulletRef = React.createRef();
-		this.handleBulletClick = this.handleBulletClick.bind(this);
-	}
-
-	componentDidMount() {
-		document.querySelectorAll(".bullet-item")[0].classList.add("selected");
-		document
-			.querySelectorAll(".testimonial-item")[0]
-			.classList.add("selected");
-	}
-
-	handleBulletClick() {}
-
+class TestimonialCard extends React.Component {
 	render() {
 		return (
-			<div class='testimonial-wrapper'>
-				<h2>
-					<em>Testimonials</em> What people say about us
-				</h2>
-				<ul class='testimonial-list rel-wrapper no-margin'>
-					{testimonyData.map((testimonial) => (
-						<TestimonialCard
-							testimonyHeading={testimonial["testimonyHeading"]}
-							testimony={testimonial["testimony"]}
-							customerName={testimonial["customerName"]}
-							customerTitle={testimonial["customerTitle"]}
-						/>
-					))}
-				</ul>
-				<ul class='bullet-list'>
-					{testimonyData.map(() => (
-						<li class='bullet-item' ref={this.bulletRef}></li>
-					))}
-				</ul>
-			</div>
+			<>
+				<li class='testimonial-item'>
+					<img
+						src='https://res.cloudinary.com/ratzydev/image/upload/v1542298371/codevember-day-15/quote.png'
+						alt='Quotation'
+						class='quotation'
+					></img>
+					<h3 class='heading'>
+						<em>{this.props.testimonyHeading}</em>
+					</h3>
+					<p class='para'>
+						<em>{this.props.testimony}</em>
+					</p>
+					<div class='testimonials-by'>
+						<h4 class='name'>
+							<em>{this.props.customerName}</em>
+						</h4>
+						<span class='designation'>
+							<em>{this.props.customerTitle}</em>
+						</span>
+					</div>
+				</li>
+			</>
+		);
+	}
+}
+
+class TestimonialCardContainer extends React.Component {
+	render() {
+		return (
+			<>
+				<div class='testimonial-wrapper rel-wrapper no-margin'>
+					<Swiper
+						className='swiper-container'
+						spaceBetween={50}
+						slidesPerView={1}
+						loop={true}
+						autoplay={{ delay: 5000, disableOnInteraction: true }}
+						onSwiper={(swiper) => console.log(swiper)}
+						onSlideChange={() => console.log("slide change")}
+					>
+						{testimonyData.map((testimonial, index) => (
+							<SwiperSlide key={index}>
+								<TestimonialCard
+									testimonyHeading={
+										testimonial["testimonyHeading"]
+									}
+									testimony={testimonial["testimony"]}
+									customerName={testimonial["customerName"]}
+									customerTitle={testimonial["customerTitle"]}
+								/>
+							</SwiperSlide>
+						))}
+					</Swiper>
+				</div>
+			</>
 		);
 	}
 }

@@ -4,7 +4,7 @@ import "./course-card.css";
 class CourseCardFront extends React.Component {
 	render() {
 		return (
-			<div class='side front'>
+			<div class='side card-front'>
 				<img src={this.props.courseImg} alt={this.props.courseId}></img>
 				<div class='info'>
 					<h2>{this.props.courseName}</h2>
@@ -18,7 +18,7 @@ class CourseCardFront extends React.Component {
 class CourseCardBack extends React.Component {
 	render() {
 		return (
-			<div class='side back'>
+			<div class='side card-back'>
 				<div class='info'>
 					<h2>{this.props.courseInstructorName}</h2>
 					<div class='reviews'>
@@ -44,6 +44,9 @@ class CourseCard extends React.Component {
 		super();
 		this.myRef = React.createRef();
 		this.handleClick = this.handleClick.bind(this);
+		this.state = {
+			isTop: true,
+		};
 	}
 
 	handleClick() {
