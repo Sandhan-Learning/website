@@ -2,7 +2,13 @@ import React from "react";
 import CourseCard from "./CourseCard";
 import "./course-card-container.css";
 
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import SwiperCore, {
+	Navigation,
+	Pagination,
+	Scrollbar,
+	A11y,
+	Autoplay,
+} from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -12,7 +18,7 @@ import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 
 // install Swiper components
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const courseData = [
 	{
@@ -86,50 +92,52 @@ const courseData = [
 class CourseCardContainer extends React.Component {
 	render() {
 		return (
-			<Swiper
-				className='swiper-container'
-				spaceBetween={50}
-				slidesPerView={5}
-				slidesPerGroup={5}
-				navigation
-				// pagination={{ clickable: true }}
-				// loop={true}
-				// scrollbar={{ draggable: true }}
-				preloadImages={true}
-				updateOnImagesReady={true}
-				onSwiper={(swiper) => console.log(swiper)}
-				onSlideChange={() => console.log("slide change")}
-				breakpoints={{
-					"@0.75": {
-						slidesPerView: 2,
-						spaceBetween: 20,
-					},
-					"@1.00": {
-						slidesPerView: 3,
-						spaceBetween: 40,
-					},
-					"@1.50": {
-						slidesPerView: 5,
-						spaceBetween: 50,
-					},
-				}}
-			>
-				{courseData.map((course) => (
-					<SwiperSlide key={course["courseId"]}>
-						<CourseCard
-							courseId={course["courseId"]}
-							courseName={course["courseName"]}
-							courseImg={course["courseImg"]}
-							courseDescription={course["courseDescription"]}
-							courseInstructorName={
-								course["courseInstructorName"]
-							}
-							courseRating={course["courseRating"]}
-							coursePrice={course["coursePrice"]}
-						/>
-					</SwiperSlide>
-				))}
-			</Swiper>
+			<>
+				<Swiper
+					className='swiper-container'
+					slidesPerView={4}
+					loop={true}
+					autoplay={{ delay: 5000, disableOnInteraction: true }}
+					// scrollbar={{ draggable: true }}
+					// centeredSlides={true}
+					preloadImages={true}
+					updateOnImagesReady={true}
+					onSwiper={(swiper) => console.log(swiper)}
+					onSlideChange={() => console.log("slide change")}
+					breakpoints={{
+						"@0.50": {
+							slidesPerView: 1,
+						},
+						"@0.75": {
+							slidesPerView: 1,
+						},
+						"@1.00": {
+							slidesPerView: 2,
+						},
+						"@1.50": {
+							navigation: true,
+							slidesPerView: 4,
+							spaceBetween: 50,
+						},
+					}}
+				>
+					{courseData.map((course) => (
+						<SwiperSlide key={course["courseId"]}>
+							<CourseCard
+								courseId={course["courseId"]}
+								courseName={course["courseName"]}
+								courseImg={course["courseImg"]}
+								courseDescription={course["courseDescription"]}
+								courseInstructorName={
+									course["courseInstructorName"]
+								}
+								courseRating={course["courseRating"]}
+								coursePrice={course["coursePrice"]}
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
+			</>
 		);
 	}
 }
