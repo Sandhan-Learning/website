@@ -1,6 +1,8 @@
 import React from "react";
 import TestimonialCardContainer from "./TestimonialCardContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Accordion from './Accordion'
+import "./FAQ.css"
 import "./webpage.css";
 import contact_icon01 from "../images/contact-icon01.png";
 import contact_icon02 from "../images/contact-icon02.png";
@@ -17,6 +19,7 @@ import sandhan_logo_whitebg from "../images/sandhan_logo.png";
 import CourseCardContainer from "./CourseCardContainer";
 import personality_illustration from "../images/personality_illustration.svg";
 import reading_illustration from "../images/reading_illustration.svg";
+import Uniqueness from "./Uniqueness";
 
 class Header extends React.Component {
 	constructor() {
@@ -395,8 +398,13 @@ class Homepage extends React.Component {
 						</a>
 					</div>
 				</section>
-				<section class='uniqueness'>
-					<div class='container'>
+				<section>
+					<div>
+					<h3 className="unique">OUR UNIQUENESS</h3>
+					<div><Uniqueness/></div>
+					
+					</div>
+					{/*<div class='container'>
 						<div class='row justify-content-center'>
 							<div class='titles'>
 								<span class='title-bg'></span>
@@ -439,14 +447,22 @@ class Homepage extends React.Component {
 								<h6>FEATURE 4</h6>
 							</div>
 						</div>
-					</div>
+		</div>*/}
 				</section>
+				<section>
+					<div>
+					<Accordion/>
+				</div>
+				</section>
+				
 				<section class='main-features'>
 					<div class='container'>
 						<div class='row'>
 							<div class='col-12'>
 								<div class='titles'>
 									<span class='title-bg'></span>
+									
+									
 									<h3>OUR COURSES</h3>
 								</div>
 							</div>
