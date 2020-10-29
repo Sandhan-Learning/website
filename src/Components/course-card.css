@@ -160,8 +160,9 @@
 	cursor: pointer;
 }
 .card-back .btn:hover h4 {
-	-webkit-transform: translateX(0px);
-	transform: translateX(0px);
+	/* -webkit-transform: translateX(0px);
+	transform: translateX(0px); */
+	font-size: 20px;
 }
 .card-back .btn:hover svg {
 	-webkit-transform: translateX(0px);
@@ -170,8 +171,9 @@
 }
 .card-back .btn h4 {
 	color: #fff;
-	-webkit-transform: translateX(12px);
-	transform: translateX(12px);
+	font-size: 20px;
+	/* -webkit-transform: translateX(12px);
+	transform: translateX(12px); */
 	-webkit-transition: -webkit-transform 0.3s ease-out;
 	transition: -webkit-transform 0.3s ease-out;
 	transition: transform 0.3s ease-out;
