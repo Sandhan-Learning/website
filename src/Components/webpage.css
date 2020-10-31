@@ -750,6 +750,63 @@ button[type="submit"] {
 	-webkit-text-fill-color: #ffffff;
 }
 
+/* VIDEO */
+#fade {
+	display: none;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 1001;
+	-moz-opacity: 0.8;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+
+#light {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
+	background: #fff;
+	z-index: 1002;
+	overflow: visible;
+}
+
+#boxclose {
+	float: right;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 3px;
+	background: #222222;
+	font-size: 31px;
+	font-weight: bold;
+	display: inline-block;
+	line-height: 0px;
+	padding: 11px 3px;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	z-index: 1002;
+	opacity: 0.9;
+}
+
+.boxclose:before {
+	content: "×";
+}
+
+#fade:hover ~ #boxclose {
+	display: none;
+}
+
+#light video {
+	widows: 900px !important;
+}
+
 /* FOOTER BAR */
 .footer-bar {
 	width: 100%;
@@ -832,6 +889,9 @@ button[type="submit"] {
 	.main-features .feature-box {
 		padding: 30px 10px;
 	}
+	/* #Video {
+		width: auto;
+	} */
 }
 /* RESPONSIVE TABLET FIXES */
 @media only screen and (max-width: 991px),
@@ -871,6 +931,7 @@ button[type="submit"] {
 	.clients ul li {
 		width: 33.33333%;
 	}
+
 	.footer-bar address {
 		margin: 15px;
 	}
@@ -932,6 +993,7 @@ button[type="submit"] {
 	.quote-bar h4 {
 		font-size: 44px;
 	}
+
 	.footer-bar {
 		text-align: center;
 	}

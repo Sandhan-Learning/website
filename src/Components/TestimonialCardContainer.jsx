@@ -20,18 +20,26 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 const testimonyData = [
 	{
-		testimonyHeading: "I Am Not A Bad Person.",
+		testimonyHeading: "Need of the hour.",
 		testimony:
-			"I am not a bad person. When I left Staples, I took some of their leads with me, but I never intended to use them. What did I intend to do with them? Who knows. Maybe keep them as a souvenir. Maybe use them.",
-		customerName: "Dwight Shrute",
-		customerTitle: "Assistant to the Regional Manager, Dunder Mifflin",
+			"Congratulations to the Chanakya Team for changing the Education Framework. The  curriculum is well designed keeping in mind the requirements of the market, so that the Student doesn't get lost or feel out off track for the Job. Such a curriculum is the need of the hour. We need such curriculums which will make the students competitive and eligible for the job at the same time. My best wishes with the team.",
+		customerName: "Mrunalini",
+		customerTitle: "Academic Head, Pune",
 	},
 	{
-		testimonyHeading: "The best solution for distance learning.",
+		testimonyHeading: "Setting right bars.",
 		testimony:
-			"I started at stage zero. With Chanakya I was able to start learning online and eventually build up enough knowledge and skills to transition into a well paying carrer.",
-		customerName: "Michael Scott",
-		customerTitle: "Regional Manager, Dunder Mifflin",
+			"Currently automobile industry is undergoing transformation and expecting to seek skilled employees rather than earlier phase of head counts. Inspired to see that Sandhan Learning is setting right bars and platforms to grow quality over the crowded headcount.",
+		customerName: "Suman Kumar",
+		customerTitle:
+			"Regional Training Manager, Nissan Motors India Pvt Ltd ",
+	},
+	{
+		testimonyHeading: "Game Changer.",
+		testimony:
+			"Congrats and best wishes- I think this is really a game changer in the field of education where focus is not just on knowledge but also on skills development where most engineering institutions are lagging behind in India.",
+		customerName: "Harshit",
+		customerTitle: "Lead Consultant, Saksoft Limited ",
 	},
 ];
 
