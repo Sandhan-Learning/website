@@ -3,8 +3,8 @@
     margin-right: 90px;
   /*  border: 1px solid black;*/
     margin-bottom: 50px;
-       background-color: #72bcd4;
-  /*  background-color: #C39EA0;*/
+       background-color: #BFDBF7;
+  /*  background-color: #E6EBE0;*/
 }
 .homes h1{
     margin-bottom: 61px;
@@ -13,12 +13,12 @@
     margin-top: 127px;
     margin-right: 556px;
  /* color: black;*/
- color:white;
+
  margin-left: 50px;
 }
 .second{
         margin-top: 40px;
- /*  color: black;*/
+   /*color: black;*/
     margin-right: 414px;
     margin-bottom: 55px;
      margin-left: 50px;
@@ -26,7 +26,7 @@
 .third{
     
     padding-top: 30px;
-  /* color: black;*/
+   /*color: black;*/
     margin-top: 26px;
     margin-right: 450px;
      margin-left: 50px;
@@ -34,7 +34,7 @@
 }
 .fourth{
     margin-top: 61px;
- /* color: black;*/
+/* color: black;*/
     margin-right: 556px;
      margin-left: 50px;
      margin-bottom: 110px;
@@ -46,7 +46,8 @@
     font-weight: 500;
   /*  margin-left: 30px;
     margin-right: 50px;*/
-   color: white;
+  /* color: white;*/
+   color:black;
 
 }
 .homes img{
@@ -57,13 +58,18 @@
 
 @media screen and (max-width:800px) {
   .homes, .first, .fourth ,.second , .third{
-    
-    width: 98%;
-    margin-left: 5px;
+    width: 90%;
+    margin-left: 26px;
+    padding-bottom: 1px;
   }
   .homes img{
     display: none;
   }
+  .first{
+    margin-top: 46px;
+  }
+  
+ 
 }
 
 
