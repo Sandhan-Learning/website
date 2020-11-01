@@ -46,7 +46,7 @@ function Uniqueness() {
             supplement programs. Named after “Chanakya” the programs are designed separately for 
             schooling system and University system which can be opted by schools and University without disturbing their 
             regular academics. The programs not only provides 360 degree
-            development to students however the programs are also completely in line with National Education policy-2020.]</p>
+            development to students however the programs are also completely in line with National Education policy-2020.</p>
             <img style={mystyle}src="/Images/innovation.png" alt="innovation"/>
         </div>
         
@@ -77,14 +77,14 @@ function Uniqueness() {
          </p>
          <img style={mystyle3} src="/Images/leadership.png" alt="moralLeadership"/>
         </div>
-        <div label="Responsibility">
+        <div className="ordered" label="Responsibility">
           <p className="fourth">
             At Sandhan we care for the nation and hence treat education as one of the most powerful way 
             to serve the nation. We had rigorously worked since long time and created two educational supplement 
             programs and named after “Guru Chanakya” the founding pillar of “Magadh empire” The programs are designed in 
             such a way that both complies completely with National Education policy 2020, develops 360 degree skills, make 
             students knowledgeable, skill full and self-reliant
-             and hence have the tag line “The True Ambassador of Atmnirbhar Bharat”.]
+             and hence have the tag line “The True Ambassador of Atmnirbhar Bharat”.
           </p>
           <img style={mystyle4} src="/Images/responsibility.jpeg.png" alt="responsibility"/>
         </div>
