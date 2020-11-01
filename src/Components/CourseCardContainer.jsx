@@ -1,6 +1,7 @@
 import React from "react";
 import CourseCard from "./CourseCard";
 import "./course-card-container.css";
+import chankya_logo from "../images/Logos/chanakya.png"
 
 import SwiperCore, {
 	Navigation,
@@ -23,69 +24,57 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 const courseData = [
 	{
 		courseId: 1,
-		courseName: "Computer Vision",
-		courseImg:
-			"https://i.pinimg.com/originals/e7/e1/ab/e7e1ab74164d65f632220bc32beab640.jpg",
+		courseName: "Chanakya",
+		courseImg: chankya_logo,
 		courseDescription:
-			"Learn the fundamentals of Artificial Intelligence & design intelligent agents to solve real world problems including games & constraint satisfaction problems.",
-		courseInstructorName: "Lex Fridman",
-		courseRating: "4.71",
-		coursePrice: "Rs 3999",
+			"For students of Graduation, Engineering and MBA.",
+		courseInstructorName: "Instructor",
+		courseRating: "Rating",
+		coursePrice: "",
 	},
 	{
 		courseId: 2,
-		courseName: "Linear Algebra",
+		courseName: "Automobile Technology",
 		courseImg:
-			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
+			"https://i.pinimg.com/originals/e7/e1/ab/e7e1ab74164d65f632220bc32beab640.jpg",
 		courseDescription:
-			"This is a basic subject on matrix theory and linear algebra. Emphasis is given to topics like systems of equations, vector spaces, determinants and eigenvalues.",
-		courseInstructorName: "Gilbert Strang",
-		courseRating: "4.94",
-		coursePrice: "Rs 1999",
+			"For Engineering students with interest in Automobile.",
+		courseInstructorName: "Instructor",
+		courseRating: "Rating",
+		coursePrice: " ",
 	},
 	{
 		courseId: 3,
-		courseName: "Computer Vision",
+		courseName: "Entrepreneurship",
 		courseImg:
-			"https://i.pinimg.com/originals/e7/e1/ab/e7e1ab74164d65f632220bc32beab640.jpg",
+			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
 		courseDescription:
-			"Learn the fundamentals of Artificial Intelligence & design intelligent agents to solve real world problems including games & constraint satisfaction problems.",
-		courseInstructorName: "Lex Fridman",
-		courseRating: "4.71",
-		coursePrice: "Rs 3999",
+			"Program for people looking to establish startups.",
+		courseInstructorName: "Instructor",
+		courseRating: "Rating",
+		coursePrice: " ",
 	},
 	{
 		courseId: 4,
-		courseName: "Linear Algebra",
-		courseImg:
-			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
-		courseDescription:
-			"This is a basic subject on matrix theory and linear algebra. Emphasis is given to topics like systems of equations, vector spaces, determinants and eigenvalues.",
-		courseInstructorName: "Gilbert Strang",
-		courseRating: "4.94",
-		coursePrice: "Rs 1999",
-	},
-	{
-		courseId: 5,
-		courseName: "Computer Vision",
+		courseName: "Pre-Placement Training",
 		courseImg:
 			"https://i.pinimg.com/originals/e7/e1/ab/e7e1ab74164d65f632220bc32beab640.jpg",
 		courseDescription:
-			"Learn the fundamentals of Artificial Intelligence & design intelligent agents to solve real world problems including games & constraint satisfaction problems.",
-		courseInstructorName: "Lex Fridman",
-		courseRating: "4.71",
-		coursePrice: "Rs 3999",
+			"15 Days, 30 Days and 3 Months comprehensive training program with campus placement orientation for students.",
+		courseInstructorName: "Instructor",
+		courseRating: "Rating",
+		coursePrice: " ",
 	},
 	{
-		courseId: 6,
-		courseName: "Linear Algebra",
+		courseId: 5,
+		courseName: "Walkin Placement Training",
 		courseImg:
 			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
 		courseDescription:
-			"This is a basic subject on matrix theory and linear algebra. Emphasis is given to topics like systems of equations, vector spaces, determinants and eigenvalues.",
-		courseInstructorName: "Gilbert Strang",
-		courseRating: "4.94",
-		coursePrice: "Rs 1999",
+			"3 Months training program with job orientation for pass out students or students who are looking for better jobs.",
+		courseInstructorName: "Instructor",
+		courseRating: "Rating",
+		coursePrice: " ",
 	},
 ];
 
@@ -102,8 +91,6 @@ class CourseCardContainer extends React.Component {
 					// centeredSlides={true}
 					preloadImages={true}
 					updateOnImagesReady={true}
-					onSwiper={(swiper) => console.log(swiper)}
-					onSlideChange={() => console.log("slide change")}
 					breakpoints={{
 						"@0.50": {
 							slidesPerView: 1,
@@ -115,9 +102,7 @@ class CourseCardContainer extends React.Component {
 							slidesPerView: 2,
 						},
 						"@1.50": {
-							navigation: true,
 							slidesPerView: 4,
-							spaceBetween: 50,
 						},
 					}}
 				>
