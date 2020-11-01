@@ -1,6 +1,11 @@
 import React from "react";
 import Tabs from "./Tabs";
 import "./App.css"
+import Innovation from "../images/Unique/innovation.png"
+import Values from "../images/Unique/values.png" 
+import Moral from "../images/Unique/leadership.png" 
+import Response from "../images/Unique/responsibility.jpeg.png" 
+
 
 import "./Uniqueness.css"
 
@@ -47,7 +52,7 @@ function Uniqueness() {
             schooling system and University system which can be opted by schools and University without disturbing their 
             regular academics. The programs not only provides 360 degree
             development to students however the programs are also completely in line with National Education policy-2020.</p>
-            <img style={mystyle}src="/Images/innovation.png" alt="innovation"/>
+            <img style={mystyle}src={Innovation} alt="innovation"/>
         </div>
         
        
@@ -61,7 +66,7 @@ function Uniqueness() {
               countries economy it also helps any country to establish a bridge between the old and the new generation and hence 
               gives a social balance to society.
              It is now really very important to inculcate value system in students from very beginning.</p>
-             <img style={mystyle2}src="/Images/values.png" alt="values"/>
+             <img style={mystyle2}src={Values} alt="values"/>
         </div>
 
         <div label="Moral Leadership">
@@ -75,7 +80,7 @@ function Uniqueness() {
                Operation managers, Business Head, Entrepreneurs, Automobile experts, Public administrators who
             are mostly IIT/IIM Alumni holding/retired from senior positions with reputed organizations.
          </p>
-         <img style={mystyle3} src="/Images/leadership.png" alt="moralLeadership"/>
+         <img style={mystyle3} src={Moral} alt="moralLeadership"/>
         </div>
         <div className="ordered" label="Responsibility">
           <p className="fourth">
@@ -86,7 +91,7 @@ function Uniqueness() {
             students knowledgeable, skill full and self-reliant
              and hence have the tag line “The True Ambassador of Atmnirbhar Bharat”.
           </p>
-          <img style={mystyle4} src="/Images/responsibility.jpeg.png" alt="responsibility"/>
+          <img style={mystyle4} src={Response} alt="responsibility"/>
         </div>
       </Tabs>
     </div>
