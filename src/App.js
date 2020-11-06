@@ -1,13 +1,10 @@
 import React from "react";
+import Homepage from "./Components/Homepage";
 
 function App() {
 	return (
 		<>
-			<h1>Demo Build</h1>
-			<p>
-				import the components in ./Components folder into the app.js to
-				preview
-			</p>
+			<Homepage />
 		</>
 	);
 }

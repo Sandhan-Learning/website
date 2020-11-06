@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import FAQ from './FAQ';
 
+
+
+
 function Accordion () {
+
+    
  const [faqs, setfaqs] = useState([
     {
       question: 'What are the programs available?',
