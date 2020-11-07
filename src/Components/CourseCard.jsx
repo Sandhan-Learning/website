@@ -1,5 +1,5 @@
 import React from "react";
-import "./course-card.css";
+import "./styles/course-card.css";
 
 class CourseCardFront extends React.Component {
 	render() {

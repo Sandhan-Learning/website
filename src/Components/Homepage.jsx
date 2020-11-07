@@ -1,9 +1,10 @@
 import React from "react";
+import fire from "../firebaseIndex";
 import TestimonialCardContainer from "./TestimonialCardContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Accordion from "./Accordion";
-import "./FAQ.css";
-import "./webpage.css";
+import "./styles/FAQ.css";
+import "./styles/webpage.css";
 import contact_icon01 from "../images/contact-icon01.png";
 import contact_icon02 from "../images/contact-icon02.png";
 import contact_icon03 from "../images/contact-icon03.png";
@@ -25,230 +26,258 @@ import tata_steel_logo from "../images/Logos/tata_steel.jpg";
 import tata_logo from "../images/Logos/tata.jpg";
 import indusind_logo from "../images/Logos/indusind.jpg";
 import vedanta_logo from "../images/Logos/vedanta.png";
+import Navbar from "./Navbar";
 import Modal from "./Modal";
 
 class Header extends React.Component {
-	constructor() {
-		super();
-		this.hamburgerReveal = this.hamburgerReveal.bind(this);
-	}
-
-	hamburgerReveal() {
-		var hamburger_menu = document.querySelector(".hamburger-menu");
-		var hamburger_menu_box = document.querySelector(".hamburger-menu-box");
-
-		hamburger_menu.classList.toggle("open");
-		hamburger_menu_box.classList.toggle("show-me");
-	}
-
 	render() {
 		return (
 			<>
-				<Modal />
-				<div class='transition-overlay'></div>
-				<aside class='hamburger-menu-box'>
-					<div class='menu'>
-						<ul class='navbar-nav'>
-							<li class='nav-item'>
-								<a href='#' class='nav-link transition'>
-									HOME
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a href='#' class='nav-link transition'>
-									ABOUT US
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a href='#' class='nav-link transition'>
-									EXPERTS
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a href='#' class='nav-link'>
-									COURSES
-								</a>
-								<ul>
-									<li>
-										<a href='#' class='transition'>
-											STUDENTS
-										</a>
-									</li>
-									<li>
-										<a href='#' class='transition'>
-											INSTITUTES
-										</a>
-									</li>
-									<li>
-										<a href='#' class='transition'>
-											CORPORATE
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class='nav-item'>
-								<a href='#' class='nav-link transition'>
-									CONTACT US
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class='inner'>
-						<h2>TOGETHER AT SANDHAN</h2>
-						<br></br>
-						<p>
-							No global movement springs from individuals. It
-							takes an entire team united behind something big.
-							Together we work hard, we laugh a lot, we brainstorm
-							non stop, we use hundreds of Post-Its a week, and we
-							give the best high-fives in town.
-						</p>
-						<p>
-							It’s an audacious, incredibly rewarding mission that
-							our increasingly diverse team is dedicated to
-							achieving.
-						</p>
-						<p>
-							Exciting challenges lie ahead—new regions,
-							technologies, and businesses. Guided by our core
-							values, we’ll meet these challenges creatively and
-							with the support of our community. Join us!
-						</p>
-						<br></br>
-						<a href='#' class='ghost-btn'>
-							<svg>
-								<rect
-									width='206'
-									height='50'
-									x='5'
-									y='5'
-									rx='25'
-									fill='none'
-									stroke='#2F2E41'
-								></rect>
-							</svg>
-							<span>Join Us!</span>
-						</a>
-					</div>
-				</aside>
-				<header class='header'>
-					<nav class='navbar'>
-						<div class='logo'>
-							<a href='#' class='transition'>
-								<img
-									src={sandhan_logo}
-									alt='Image'
-									class='logo-light'
-								></img>
-								<img
-									src={sandhan_logo}
-									alt='Image'
-									class='logo-colored'
-								></img>
-							</a>
-						</div>
+				<div id='light'>
+					<a class='boxclose' id='boxclose'></a>
+					<video id='Video' width='900px'>
+						<source
+							src='ttps://www.googleapis.com/drive/v3/files/1pv2bnhYCQPluu24_54p7HHxW6x3hSNZe?alt=media&key=AIzaSyAuT4romdlgsj6PUHK2xoijJc2QU7NDyKk'
+							type='video/mp4'
+						></source>
+					</video>
+				</div>
 
-						<div
-							class='hamburger-menu'
-							onClick={this.hamburgerReveal}
-						>
-							<span></span> <span></span> <span></span>
-						</div>
-
-						<ul class='navbar-nav'>
-							<li class='nav-item'>
-								<a href='#' class='nav-link transition'>
-									HOME
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a href='#' class='nav-link transition'>
-									ABOUT US
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a href='#' class='nav-link transition'>
-									EXPERTS
-								</a>
-							</li>
-							<li class='nav-item'>
-								<a href='#' class='nav-link'>
-									COURSES
-								</a>
-								<ul>
-									<li>
-										<a href='#' class='transition'>
-											STUDENTS
-										</a>
-									</li>
-									<li>
-										<a href='#' class='transition'>
-											INSTITUTES
-										</a>
-									</li>
-									<li>
-										<a href='#' class='transition'>
-											CORPORATE
-										</a>
-									</li>
-								</ul>
-							</li>
-							<li class='nav-item'>
-								<a href='#' class='nav-link transition'>
-									CONTACT US
-								</a>
-							</li>
-						</ul>
-					</nav>
-					<div id='light'>
-						<a class='boxclose' id='boxclose'></a>
-						<video id='Video' width='900px'>
-							<source
-								src='https://www.googleapis.com/drive/v3/files/1pv2bnhYCQPluu24_54p7HHxW6x3hSNZe?alt=media&key=AIzaSyAuT4romdlgsj6PUHK2xoijJc2QU7NDyKk'
-								type='video/mp4'
-							></source>
-						</video>
-					</div>
-
-					<div class='inner'>
-						<h2>Learn from industry experts for a better career</h2>
-						<a href='#' class='ghost-btn'>
-							<svg>
-								<defs>
-									<linearGradient>
-										<stop
-											offset='0%'
-											stop-color='#FF8282'
-										/>
-										<stop
-											offset='100%'
-											stop-color='#E178ED'
-										/>
-									</linearGradient>
-								</defs>
-								<rect
-									width='206'
-									height='50'
-									x='5'
-									y='5'
-									rx='25'
-									fill='none'
-									stroke='#0F5AF2'
-								></rect>
-							</svg>
-							<span>Enroll Now</span>
-						</a>
-					</div>
-					<div class='illustration'>
-						<img src={personality_illustration} alt='Image'></img>
-					</div>
-				</header>
+				<div class='inner'>
+					<h2>{this.props.title}</h2>
+					<a href='#' class='ghost-btn'>
+						<svg>
+							<defs>
+								<linearGradient>
+									<stop offset='0%' stop-color='#FF8282' />
+									<stop offset='100%' stop-color='#E178ED' />
+								</linearGradient>
+							</defs>
+							<rect
+								width='206'
+								height='50'
+								x='5'
+								y='5'
+								rx='25'
+								fill='none'
+								stroke='#0F5AF2'
+							></rect>
+						</svg>
+						<span>{this.props.buttonText}</span>
+					</a>
+				</div>
+				<div class='illustration'>
+					<img src={personality_illustration} alt='Image'></img>
+				</div>
 			</>
 		);
 	}
 }
+
+class OurVision extends React.Component {
+	render() {
+		return (
+			<section class='side-image-content'>
+				<div class='side-image'>
+					<img src={reading_illustration} alt='Image'></img>
+				</div>
+
+				<div class='side-content'>
+					<div class='titles'>
+						<span class='title-bg'></span>
+						<h3>OUR VISION</h3>
+					</div>
+					<p>{this.props.para1}</p>
+					<p>{this.props.para2}</p>
+					<a href='#' class='ghost-btn'>
+						<svg>
+							<defs>
+								<linearGradient id='grad1'>
+									<stop offset='0%' stop-color='#FF8282' />
+									<stop offset='100%' stop-color='#E178ED' />
+								</linearGradient>
+							</defs>
+							<rect
+								width='206'
+								height='50'
+								x='5'
+								y='5'
+								rx='25'
+								fill='none'
+								stroke='url(#grad1)'
+							></rect>
+						</svg>
+						<span>{this.props.buttonText}</span>
+					</a>
+				</div>
+			</section>
+		);
+	}
+}
+
+class OurUniqueness extends React.Component {
+	render() {
+		return (
+			<section>
+				<div>
+					<h3 className='unique'>OUR UNIQUENESS</h3>
+					<div>
+						<Uniqueness />
+					</div>
+				</div>
+			</section>
+		);
+	}
+}
+
+class OurCourses extends React.Component {
+	render() {
+		return (
+			<section class='main-features'>
+				<div class='container'>
+					<div class='row'>
+						<div class='col-12'>
+							<div class='titles'>
+								<span class='title-bg'></span>
+								<h3>OUR COURSES</h3>
+							</div>
+						</div>
+					</div>
+					<CourseCardContainer />
+				</div>
+			</section>
+		);
+	}
+}
+
+class CoachesFrom extends React.Component {
+	render() {
+		return (
+			<section class='clients'>
+				<div class='container'>
+					<div class='row'>
+						<div class='col-12'>
+							<div class='titles'>
+								<span class='title-bg'></span>
+								<h3>Our experts coaches are from</h3>
+							</div>
+							<ul>
+								<li>
+									<img
+										src={ashok_leyland_logo}
+										alt='Image'
+									></img>
+								</li>
+								<li>
+									<img src={cummins_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img src={hero_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img src={icici_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img
+										src={tata_steel_logo}
+										alt='Image'
+									></img>
+								</li>
+								<li>
+									<img src={mahindra_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img
+										src={maruti_suzuki_logo}
+										alt='Image'
+									></img>
+								</li>
+								<li>
+									<img src={tata_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img
+										src={mercedes_benz_logo}
+										alt='Image'
+									></img>
+								</li>
+								<li>
+									<img src={indusind_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img src={nissan_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img src={vedanta_logo} alt='Image'></img>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		);
+	}
+}
+
+class HomepageTestimonials extends React.Component {
+	render() {
+		return (
+			<section class='main-features'>
+				<div class='container'>
+					<div class='titles'>
+						<span class='title-bg'></span>
+						<h3>TESTIMONIALS</h3>
+					</div>
+					<TestimonialCardContainer />
+				</div>
+			</section>
+		);
+	}
+}
+
 class Homepage extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			ourVisionData: "",
+			headerData: "",
+			joinUsData: "",
+			footerContactData: "",
+			footerData: "",
+		};
+	}
+
 	componentDidMount() {
+		const headerRef = fire.database().ref("header");
+
+		headerRef.on("value", (snapshot) => {
+			this.setState({ headerData: snapshot.val() }, () => {});
+		});
+
+		const ourVisionRef = fire.database().ref("ourVision");
+
+		ourVisionRef.on("value", (snapshot) => {
+			this.setState({ ourVisionData: snapshot.val() }, () => {});
+		});
+
+		const joinUsRef = fire.database().ref("joinUs");
+
+		joinUsRef.on("value", (snapshot) => {
+			this.setState({ joinUsData: snapshot.val() }, () => {});
+		});
+
+		const footerContactRef = fire.database().ref("footerContact");
+
+		footerContactRef.on("value", (snapshot) => {
+			this.setState({ footerContactData: snapshot.val() }, () => {});
+		});
+
+		const footerRef = fire.database().ref("footer");
+
+		footerRef.on("value", (snapshot) => {
+			this.setState({ footerData: snapshot.val() }, () => {});
+		});
+
 		window.onscroll = function () {
 			myFunction();
 		};
@@ -262,14 +291,6 @@ class Homepage extends React.Component {
 				navbar.classList.remove("stick-me");
 			}
 		}
-		// document.body.onkeydown = function (e) {
-		// 	if (!e) {
-		// 		e = KeyboardEvent.key;
-		// 	}
-		// 	if (e.key == 27) {
-		// 		lightbox_close();
-		// 	}
-		// };
 
 		document.getElementById("fade").onclick = function () {
 			lightbox_close();
@@ -300,224 +321,80 @@ class Homepage extends React.Component {
 		return (
 			<>
 				<div class='transition-overlay'></div>
+				<Modal />
 
-				<Header />
+				<div className='notPopup'>
+					<Navbar>
+						<Header
+							title={this.state.headerData.title}
+							buttonText={this.state.headerData.buttonText}
+							promoVideLink={this.state.headerData.promoVideLink}
+						/>
+					</Navbar>
+					<OurVision
+						para1={this.state.ourVisionData.para1}
+						para2={this.state.ourVisionData.para2}
+						buttonText={this.state.ourVisionData.buttonText}
+					/>
+					<OurUniqueness />
+					<Accordion />
+					<OurCourses />
+					<CoachesFrom />
+					<HomepageTestimonials />
 
-				<section class='side-image-content'>
-					<div class='side-image'>
-						<img src={reading_illustration} alt='Image'></img>
-					</div>
+					<section class='quote-bar'>
+						<div class='container'>
+							<div class='row'>
+								<div class='col-12'>
+									<h4>{this.state.joinUsData.title}</h4>
+									<p>{this.state.joinUsData.para}</p>
 
-					<div class='side-content'>
-						<div class='titles'>
-							<span class='title-bg'></span>
-							<h3>OUR VISION</h3>
-						</div>
-						<p>
-							A Complete education means when someone knows how to
-							utilize one’s{" "}
-							<strong>mind, skills, thoughts, learnings</strong>{" "}
-							and
-							<strong> dreams</strong> in a systematic manner so
-							that he/she would not be worried about unemployment
-							and uncertainty of life & Career.
-						</p>
-						<p>
-							In our flagship program we create a learning
-							environment where every individual develops
-							<strong>
-								{" "}
-								professionally, psychologically, economically
-							</strong>{" "}
-							and will be a valuable asset to the organization,
-							society and the Nation.
-						</p>
-						<a href='#' class='ghost-btn'>
-							<svg>
-								<defs>
-									<linearGradient id='grad1'>
-										<stop
-											offset='0%'
-											stop-color='#FF8282'
-										/>
-										<stop
-											offset='100%'
-											stop-color='#E178ED'
-										/>
-									</linearGradient>
-								</defs>
-								<rect
-									width='206'
-									height='50'
-									x='5'
-									y='5'
-									rx='25'
-									fill='none'
-									stroke='url(#grad1)'
-								></rect>
-							</svg>
-							<span>Learn More +</span>
-						</a>
-					</div>
-				</section>
-				<section>
-					<div>
-						<h3 className='unique'>OUR UNIQUENESS</h3>
-						<div>
-							<Uniqueness />
-						</div>
-					</div>
-				</section>
-				<section>
-					<div>
-						<Accordion />
-					</div>
-				</section>
-				<section class='main-features'>
-					<div class='container'>
-						<div class='row'>
-							<div class='col-12'>
-								<div class='titles'>
-									<span class='title-bg'></span>
-									<h3>OUR COURSES</h3>
+									<a href='#' class='ghost-btn vidButton'>
+										<svg>
+											<defs>
+												<linearGradient>
+													<stop
+														offset='0%'
+														stop-color='#FF8282'
+													/>
+													<stop
+														offset='100%'
+														stop-color='#E178ED'
+													/>
+												</linearGradient>
+											</defs>
+											<rect
+												width='206'
+												height='50'
+												x='5'
+												y='5'
+												rx='25'
+												fill='none'
+												stroke='#ffffff'
+											></rect>
+										</svg>
+										<span>
+											{this.state.joinUsData.buttonText}
+										</span>
+
+										<div id='fade'></div>
+									</a>
 								</div>
 							</div>
 						</div>
-						<CourseCardContainer />
-					</div>
-				</section>
-				<section class='clients'>
-					<div class='container'>
-						<div class='row'>
-							<div class='col-12'>
-								<div class='titles'>
-									<span class='title-bg'></span>
-									<h3>Our experts coaches are from</h3>
-								</div>
-								<ul>
-									<li>
-										<img
-											src={ashok_leyland_logo}
-											alt='Image'
-										></img>
-									</li>
-									<li>
-										<img
-											src={cummins_logo}
-											alt='Image'
-										></img>
-									</li>
-									<li>
-										<img src={hero_logo} alt='Image'></img>
-									</li>
-									<li>
-										<img src={icici_logo} alt='Image'></img>
-									</li>
-									<li>
-										<img
-											src={tata_steel_logo}
-											alt='Image'
-										></img>
-									</li>
-									<li>
-										<img
-											src={mahindra_logo}
-											alt='Image'
-										></img>
-									</li>
-									<li>
-										<img
-											src={maruti_suzuki_logo}
-											alt='Image'
-										></img>
-									</li>
-									<li>
-										<img src={tata_logo} alt='Image'></img>
-									</li>
-									<li>
-										<img
-											src={mercedes_benz_logo}
-											alt='Image'
-										></img>
-									</li>
-									<li>
-										<img
-											src={indusind_logo}
-											alt='Image'
-										></img>
-									</li>
-									<li>
-										<img
-											src={nissan_logo}
-											alt='Image'
-										></img>
-									</li>
-									<li>
-										<img
-											src={vedanta_logo}
-											alt='Image'
-										></img>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class='main-features'>
-					<div class='container'>
-						<div class='titles'>
-							<span class='title-bg'></span>
-							<h3>TESTIMONIALS</h3>
-						</div>
-						<TestimonialCardContainer />
-					</div>
-				</section>
-				<section class='quote-bar'>
-					<div class='container'>
-						<div class='row'>
-							<div class='col-12'>
-								<h4>WHY SHOULD YOU JOIN US ?</h4>
-								<p>
-									Feel free to get in touch with us. We are
-									always open to discussing new projects,
-									creative ideas or opportunities to be a part
-									of your visions.
-								</p>
+					</section>
 
-								<a href='#' class='ghost-btn vidButton'>
-									<svg>
-										<defs>
-											<linearGradient>
-												<stop
-													offset='0%'
-													stop-color='#FF8282'
-												/>
-												<stop
-													offset='100%'
-													stop-color='#E178ED'
-												/>
-											</linearGradient>
-										</defs>
-										<rect
-											width='206'
-											height='50'
-											x='5'
-											y='5'
-											rx='25'
-											fill='none'
-											stroke='#ffffff'
-										></rect>
-									</svg>
-									<span>WATCH</span>
-
-									<div id='fade'></div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<Footer />
+					<Footer
+						email={this.state.footerContactData.email}
+						location={this.state.footerContactData.location}
+						phone={this.state.footerContactData.phone}
+						time={this.state.footerContactData.time}
+						promoFacebook={this.state.footerData.promoFacebook}
+						promoInstagram={this.state.footerData.promoInstagram}
+						promoTwitter={this.state.footerData.promoTwitter}
+						promoLinkedIn={this.state.footerData.promoLinkedIn}
+					/>
+				</div>
 			</>
 		);
 	}
@@ -534,16 +411,16 @@ class Footer extends React.Component {
 								<figure>
 									<img src={contact_icon01} alt='Image'></img>
 								</figure>
-								<h4>E-MAILS</h4>
-								<address>Education.sandhan@gmail.com</address>
+								<h4>E-MAIL</h4>
+								<address>{this.props.email}</address>
 							</div>
 
 							<div class='col-lg-3 col-md-6'>
 								<figure>
 									<img src={contact_icon02} alt='Image'></img>
 								</figure>
-								<h4>PHONES</h4>
-								<address>+91 7978349894</address>
+								<h4>PHONE</h4>
+								<address>{this.props.phone}</address>
 							</div>
 
 							<div class='col-lg-3 col-md-6'>
@@ -551,7 +428,7 @@ class Footer extends React.Component {
 									<img src={contact_icon03} alt='Image'></img>
 								</figure>
 								<h4>SUPPORT</h4>
-								<address>Mon to Fri 09:00am to 04:00pm</address>
+								<address>{this.props.time}</address>
 							</div>
 
 							<div class='col-lg-3 col-md-6'>
@@ -559,9 +436,7 @@ class Footer extends React.Component {
 									<img src={contact_icon04} alt='Image'></img>
 								</figure>
 								<h4>LOCATION</h4>
-								<address>
-									Arcon Heights, Gothapatna, BBSR
-								</address>
+								<address>{this.props.location}</address>
 							</div>
 						</div>
 					</div>
@@ -586,12 +461,12 @@ class Footer extends React.Component {
 
 								<ul>
 									<li>
-										<a href='#'>
+										<a href={this.props.promoTwitter}>
 											<img src='data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYxMiA2MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYxMiA2MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNjEyLDExNi4yNThjLTIyLjUyNSw5Ljk4MS00Ni42OTQsMTYuNzUtNzIuMDg4LDE5Ljc3MmMyNS45MjktMTUuNTI3LDQ1Ljc3Ny00MC4xNTUsNTUuMTg0LTY5LjQxMSAgICBjLTI0LjMyMiwxNC4zNzktNTEuMTY5LDI0LjgyLTc5Ljc3NSwzMC40OGMtMjIuOTA3LTI0LjQzNy01NS40OS0zOS42NTgtOTEuNjMtMzkuNjU4Yy02OS4zMzQsMC0xMjUuNTUxLDU2LjIxNy0xMjUuNTUxLDEyNS41MTMgICAgYzAsOS44MjgsMS4xMDksMTkuNDI3LDMuMjUxLDI4LjYwNkMxOTcuMDY1LDIwNi4zMiwxMDQuNTU2LDE1Ni4zMzcsNDIuNjQxLDgwLjM4NmMtMTAuODIzLDE4LjUxLTE2Ljk4LDQwLjA3OC0xNi45OCw2My4xMDEgICAgYzAsNDMuNTU5LDIyLjE4MSw4MS45OTMsNTUuODM1LDEwNC40NzljLTIwLjU3NS0wLjY4OC0zOS45MjYtNi4zNDgtNTYuODY3LTE1Ljc1NnYxLjU2OGMwLDYwLjgwNiw0My4yOTEsMTExLjU1NCwxMDAuNjkzLDEyMy4xMDQgICAgYy0xMC41MTcsMi44My0yMS42MDcsNC4zOTgtMzMuMDgsNC4zOThjLTguMTA3LDAtMTUuOTQ3LTAuODAzLTIzLjYzNC0yLjMzM2MxNS45ODUsNDkuOTA3LDYyLjMzNiw4Ni4xOTksMTE3LjI1Myw4Ny4xOTQgICAgYy00Mi45NDcsMzMuNjU0LTk3LjA5OSw1My42NTUtMTU1LjkxNiw1My42NTVjLTEwLjEzNCwwLTIwLjExNi0wLjYxMi0yOS45NDQtMS43MjFjNTUuNTY3LDM1LjY4MSwxMjEuNTM2LDU2LjQ4NSwxOTIuNDM4LDU2LjQ4NSAgICBjMjMwLjk0OCwwLDM1Ny4xODgtMTkxLjI5MSwzNTcuMTg4LTM1Ny4xODhsLTAuNDIxLTE2LjI1M0M1NzMuODcyLDE2My41MjYsNTk1LjIxMSwxNDEuNDIyLDYxMiwxMTYuMjU4eiIgZmlsbD0iIzcyOTNiMyIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=' />
 										</a>
 									</li>
 									<li>
-										<a href='#'>
+										<a href={this.props.promoFacebook}>
 											<img src='data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDk2LjEyNCA5Ni4xMjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDk2LjEyNCA5Ni4xMjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNNzIuMDg5LDAuMDJMNTkuNjI0LDBDNDUuNjIsMCwzNi41Nyw5LjI4NSwzNi41NywyMy42NTZ2MTAuOTA3SDI0LjAzN2MtMS4wODMsMC0xLjk2LDAuODc4LTEuOTYsMS45NjF2MTUuODAzICAgYzAsMS4wODMsMC44NzgsMS45NiwxLjk2LDEuOTZoMTIuNTMzdjM5Ljg3NmMwLDEuMDgzLDAuODc3LDEuOTYsMS45NiwxLjk2aDE2LjM1MmMxLjA4MywwLDEuOTYtMC44NzgsMS45Ni0xLjk2VjU0LjI4N2gxNC42NTQgICBjMS4wODMsMCwxLjk2LTAuODc3LDEuOTYtMS45NmwwLjAwNi0xNS44MDNjMC0wLjUyLTAuMjA3LTEuMDE4LTAuNTc0LTEuMzg2Yy0wLjM2Ny0wLjM2OC0wLjg2Ny0wLjU3NS0xLjM4Ny0wLjU3NUg1Ni44NDJ2LTkuMjQ2ICAgYzAtNC40NDQsMS4wNTktNi43LDYuODQ4LTYuN2w4LjM5Ny0wLjAwM2MxLjA4MiwwLDEuOTU5LTAuODc4LDEuOTU5LTEuOTZWMS45OEM3NC4wNDYsMC44OTksNzMuMTcsMC4wMjIsNzIuMDg5LDAuMDJ6IiBmaWxsPSIjNzI5M2IzIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==' />
 										</a>
 									</li>
@@ -601,7 +476,7 @@ class Footer extends React.Component {
 										</a>
 									</li>
 									<li>
-										<a href='#'>
+										<a href={this.props.promoLinkedIn}>
 											<img src='data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDQzMC4xMTcgNDMwLjExNyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDMwLjExNyA0MzAuMTE3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggaWQ9IkxpbmtlZEluIiBkPSJNNDMwLjExNywyNjEuNTQzVjQyMC41NmgtOTIuMTg4VjI3Mi4xOTNjMC0zNy4yNzEtMTMuMzM0LTYyLjcwNy00Ni43MDMtNjIuNzA3ICAgYy0yNS40NzMsMC00MC42MzIsMTcuMTQyLTQ3LjMwMSwzMy43MjRjLTIuNDMyLDUuOTI4LTMuMDU4LDE0LjE3OS0zLjA1OCwyMi40NzdWNDIwLjU2aC05Mi4yMTljMCwwLDEuMjQyLTI1MS4yODUsMC0yNzcuMzJoOTIuMjEgICB2MzkuMzA5Yy0wLjE4NywwLjI5NC0wLjQzLDAuNjExLTAuNjA2LDAuODk2aDAuNjA2di0wLjg5NmMxMi4yNTEtMTguODY5LDM0LjEzLTQ1LjgyNCw4My4xMDItNDUuODI0ICAgQzM4NC42MzMsMTM2LjcyNCw0MzAuMTE3LDE3Ni4zNjEsNDMwLjExNywyNjEuNTQzeiBNNTIuMTgzLDkuNTU4QzIwLjYzNSw5LjU1OCwwLDMwLjI1MSwwLDU3LjQ2MyAgIGMwLDI2LjYxOSwyMC4wMzgsNDcuOTQsNTAuOTU5LDQ3Ljk0aDAuNjE2YzMyLjE1OSwwLDUyLjE1OS0yMS4zMTcsNTIuMTU5LTQ3Ljk0QzEwMy4xMjgsMzAuMjUxLDgzLjczNCw5LjU1OCw1Mi4xODMsOS41NTh6ICAgIE01LjQ3Nyw0MjAuNTZoOTIuMTg0di0yNzcuMzJINS40NzdWNDIwLjU2eiIgZmlsbD0iIzcyOTNiMyIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=' />
 										</a>
 									</li>

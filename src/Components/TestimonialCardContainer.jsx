@@ -1,5 +1,5 @@
 import React from "react";
-import "./testimonial-card.css";
+import "./styles/testimonial-card.css";
 import SwiperCore, {
 	Navigation,
 	Pagination,
@@ -84,8 +84,6 @@ class TestimonialCardContainer extends React.Component {
 						slidesPerView={1}
 						loop={true}
 						autoplay={{ delay: 5000, disableOnInteraction: true }}
-						onSwiper={(swiper) => console.log(swiper)}
-						onSlideChange={() => console.log("slide change")}
 					>
 						{testimonyData.map((testimonial, index) => (
 							<SwiperSlide key={index}>

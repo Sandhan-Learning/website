@@ -731,7 +731,7 @@ button[type="submit"] {
 	float: left;
 	padding: 70px 0;
 	text-align: center;
-	background: url(../images/trianglify-lowres.png) center no-repeat;
+	background: url(../../images/trianglify-lowres.png) center no-repeat;
 	background-size: cover;
 }
 .quote-bar h4 {
