@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CourseCardPopup from "./CourseCardPopup";
-import "./Modal.css";
+import "./styles/Modal.css";
 
 const courseData = [
 	{
@@ -9,9 +9,7 @@ const courseData = [
 		courseImg:
 			"https://i.pinimg.com/originals/e7/e1/ab/e7e1ab74164d65f632220bc32beab640.jpg",
 		courseDescription: "For students of Graduation, Engineering and MBA.",
-		courseInstructorName: "Instructor",
-		courseRating: "Rating",
-		coursePrice: "",
+		courseEnrollURL: "https://forms.gle/YjVWQmAgSL2ttFNJ8",
 	},
 	{
 		courseId: 2,
@@ -20,6 +18,7 @@ const courseData = [
 			"https://i.pinimg.com/originals/e7/e1/ab/e7e1ab74164d65f632220bc32beab640.jpg",
 		courseDescription:
 			"15 Days, 30 Days and 3 Months comprehensive training program with campus placement orientation for students.",
+		courseEnrollURL: "https://forms.gle/YjVWQmAgSL2ttFNJ8",
 	},
 	{
 		courseId: 3,
@@ -28,6 +27,7 @@ const courseData = [
 			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
 		courseDescription:
 			"3 Months training program with job orientation for pass out students or students who are looking for better jobs.",
+		courseEnrollURL: "https://forms.gle/YjVWQmAgSL2ttFNJ8",
 	},
 ];
 
@@ -64,6 +64,7 @@ export const ModalContainer = ({ close }) => {
 								courseName={course["courseName"]}
 								courseImg={course["courseImg"]}
 								courseDescription={course["courseDescription"]}
+								courseEnrollURL={course["courseEnrollURL"]}
 							/>
 						))}
 					</div>

@@ -1,12 +1,12 @@
 import React from "react";
-import "./course-card-popup.css";
+import "./styles/course-card-popup.css";
 
 class CourseCardPopup extends React.Component {
 	componentDidMount() {
-		document.querySelector(".header").style.opacity = 0.1;
+		document.querySelector(".notPopup").style.opacity = 0.1;
 	}
 	componentWillUnmount() {
-		document.querySelector(".header").style.opacity = 1;
+		document.querySelector(".notPopup").style.opacity = 1;
 	}
 	render() {
 		return (
@@ -18,10 +18,7 @@ class CourseCardPopup extends React.Component {
 						<p>{this.props.courseDescription}</p>
 						<a href='#'>Learn More</a>
 					</figcaption>
-					<a
-						href='https://forms.gle/YjVWQmAgSL2ttFNJ8'
-						class='read-more'
-					>
+					<a href={this.props.courseEnrollURL} class='read-more'>
 						Enroll Now
 					</a>
 				</figure>

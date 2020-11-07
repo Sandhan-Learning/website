@@ -5,7 +5,7 @@ import Values from "../images/values.png";
 import Leadership from "../images/leadership.png";
 import Responsibility from "../images/responsibility.png";
 
-import "./Uniqueness.css";
+import "./styles/Uniqueness.css";
 
 function Uniqueness() {
 	const mystyle = {

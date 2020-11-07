@@ -1,7 +1,6 @@
 import React from "react";
 import CourseCard from "./CourseCard";
-import "./course-card-container.css";
-import chankya_logo from "../images/Logos/chanakya.png"
+import "./styles/course-card-container.css";
 
 import SwiperCore, {
 	Navigation,
@@ -25,9 +24,9 @@ const courseData = [
 	{
 		courseId: 1,
 		courseName: "Chanakya",
-		courseImg: chankya_logo,
-		courseDescription:
-			"For students of Graduation, Engineering and MBA.",
+		courseImg:
+			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
+		courseDescription: "For students of Graduation, Engineering and MBA.",
 		courseInstructorName: "Instructor",
 		courseRating: "Rating",
 		coursePrice: "",
@@ -48,8 +47,7 @@ const courseData = [
 		courseName: "Entrepreneurship",
 		courseImg:
 			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
-		courseDescription:
-			"Program for people looking to establish startups.",
+		courseDescription: "Program for people looking to establish startups.",
 		courseInstructorName: "Instructor",
 		courseRating: "Rating",
 		coursePrice: " ",
