@@ -10,6 +10,22 @@ class Navbar extends React.Component {
 		this.hamburgerReveal = this.hamburgerReveal.bind(this);
 	}
 
+	componentDidMount() {
+		window.onscroll = function () {
+			myFunction();
+		};
+		var navbar = document.querySelector(".navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+			if (window.pageYOffset > sticky) {
+				navbar.classList.add("stick-me");
+			} else {
+				navbar.classList.remove("stick-me");
+			}
+		}
+	}
+
 	hamburgerReveal() {
 		var hamburger_menu = document.querySelector(".hamburger-menu");
 		var hamburger_menu_box = document.querySelector(".hamburger-menu-box");
@@ -19,6 +35,7 @@ class Navbar extends React.Component {
 	}
 
 	render() {
+		console.log(this.props.videobg);
 		return (
 			<>
 				<div class='transition-overlay'></div>
@@ -42,7 +59,7 @@ class Navbar extends React.Component {
 							</li>
 							<li class='nav-item'>
 								<a href='/' class='nav-link'>
-									COURSES
+									PROGRAMS
 								</a>
 								<ul>
 									<li>
@@ -117,6 +134,7 @@ class Navbar extends React.Component {
 					</div>
 				</aside>
 				<header class='header'>
+					{this.props.videobg}
 					<nav class='navbar'>
 						<div class='logo'>
 							<a href='/' class='transition'>
@@ -139,7 +157,9 @@ class Navbar extends React.Component {
 						>
 							<span></span> <span></span> <span></span>
 						</div>
-
+						<a href='#' class='custom-btn'>
+							CAREERS
+						</a>
 						<ul class='navbar-nav'>
 							<li class='nav-item'>
 								<a href='/' class='nav-link transition'>
@@ -158,7 +178,7 @@ class Navbar extends React.Component {
 							</li>
 							<li class='nav-item'>
 								<a href='/' class='nav-link'>
-									COURSES
+									PROGRAMS
 								</a>
 								<ul>
 									<li>
@@ -194,7 +214,7 @@ class Navbar extends React.Component {
 							</li>
 						</ul>
 					</nav>
-					{this.props.children}
+					{this.props.inner}
 				</header>
 			</>
 		);
