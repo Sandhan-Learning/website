@@ -1,0 +1,53 @@
+.corporate{
+    display: flex;
+    margin-top: 50px;
+    white-space: pre-line;
+    vertical-align: bottom;
+    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+    letter-spacing: -0.003em;
+    line-height: 30px;
+    
+}
+.corporate img{
+    height:60vh;
+    margin-left: 50px;
+}
+.corporate_right{
+    margin-left: 200px;
+}
+.corporate_technical{
+    margin-top: 20px;
+    border-bottom: 1px solid gray;
+}
+.corporate_personal{
+    margin-top:30px;
+}
+.tag{
+    color:#0074D9;
+}
+@media screen and (max-width: 1000px) {
+    .corporate{
+        display: flex;
+        flex-direction: column;
+    }
+    .corporate img{
+        height:32vh;
+          margin-left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+    .corporate_right{
+          margin-left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+     
+    }
+    h3{
+        margin-top: 40px;
+    }
+    .corporate_list{
+      margin-right: -88px;
+    margin-left: -92px !important;
+    }
+}
+
