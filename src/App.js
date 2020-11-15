@@ -7,6 +7,7 @@ import StudentCourses from "./Components/StudentCourses";
 import InstituteCourses from "./Components/InstituteCourses";
 import CorporateCourses from "./Components/CorporateCourses";
 import Contact from "./Components/Contact";
+import Chanakya from "./Components/Chanakya";
 
 function App() {
 	return (
@@ -32,6 +33,9 @@ function App() {
 						component={CorporateCourses}
 					/>
 					<Route exact path='/contact' component={Contact} />
+					<Route exact path='/chanakya'>
+						<Chanakya />
+					</Route>
 				</Switch>
 			</BrowserRouter>
 		</>
