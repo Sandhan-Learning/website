@@ -19,6 +19,7 @@ function Chanakya() {
     const[about,setAbout]=useState("Lorem Ipsum Text")
     const[image,setImage]=useState('Image');
     const imageStyle ={
+        marginTop:'-150px',
     marginLeft: "50%",
     transform: "translateX(-140px)",
     textAlign: "center"
@@ -41,13 +42,15 @@ function Chanakya() {
    
     return (
         <div className="chanakya">
-                 <Navbar/>
-                 <div><img style={imageStyle} src={Chanakyas} alt="chanakya_image"/></div>
+             <Navbar/>            
+                
+               
             
             
-           
+            
             
             <section className="Flagship_section">
+                  <div><img style={imageStyle} src={Chanakyas} alt="chanakya_image"/></div>
                 <h1>Flagship program of Sandhan Learning</h1>
                 <div>
                   <ReadMoreDemo/>
@@ -101,6 +104,7 @@ function Chanakya() {
             	
             
             <Footer/>
+            
           
           
             
