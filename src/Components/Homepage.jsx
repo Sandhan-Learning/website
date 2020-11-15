@@ -24,6 +24,7 @@ import vedanta_logo from "../images/Logos/vedanta.png";
 import Navbar from "./Navbar";
 import Modal from "./Modal";
 import Footer from "./Footer";
+import {Link} from "react-router-dom"
 
 class Header extends React.Component {
 	componentDidMount() {
@@ -67,6 +68,7 @@ class Header extends React.Component {
 				<div class='inner'>
 					<h2>{this.props.title}</h2>
 					<a href='#' class='ghost-btn'>
+						<Link to="/chanakya">
 						<svg>
 							<defs>
 								<linearGradient>
@@ -84,6 +86,7 @@ class Header extends React.Component {
 								stroke='#0F5AF2'
 							></rect>
 						</svg>
+						</Link>
 						<span>{this.props.buttonText}</span>
 					</a>
 				</div>
