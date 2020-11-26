@@ -1,6 +1,6 @@
 import React from "react";
 import fire from "../firebaseIndex";
-import "./styles/webpage.css";
+import "./styles/footer.css";
 import contact_icon01 from "../images/contact-icon01.png";
 import contact_icon02 from "../images/contact-icon02.png";
 import contact_icon03 from "../images/contact-icon03.png";

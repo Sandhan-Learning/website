@@ -4,35 +4,34 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import image02 from "../images/About/image02.jpg";
 import team01 from "../images/About/team01.jpg";
-import team02 from "../images/About/team02.jpg";
 
 class AboutUs extends React.Component {
 	componentDidMount() {
-		// var video = document.getElementById("video-apj");
-		// var videoExitHeight = document.querySelector(".content").offsetTop;
-		// if (
-		// 	document.body.clientWidth >= 767 &&
-		// 	window.pageYOffset <= videoExitHeight
-		// ) {
-		// 	video.setAttribute("autoplay", true);
-		// 	video.classList.remove("hide");
-		// }
-		// function reportWindowScroll() {
-		// 	videoExitHeight = document.querySelector(".content").offsetTop;
-		// 	if (
-		// 		document.body.clientWidth >= 767 &&
-		// 		window.pageYOffset <= videoExitHeight
-		// 	) {
-		// 		video.classList.remove("hide");
-		// 		video.play();
-		// 		video.setAttribute("autoplay", true);
-		// 	} else {
-		// 		video.classList.add("hide");
-		// 		video.removeAttribute("autoplay");
-		// 		video.pause();
-		// 	}
-		// }
-		// window.onscroll = reportWindowScroll;
+		var video = document.getElementById("video-apj");
+		var videoExitHeight = document.querySelector(".hero-image").offsetTop;
+		if (
+			document.body.clientWidth >= 767 &&
+			window.pageYOffset <= videoExitHeight
+		) {
+			video.setAttribute("autoPlay", true);
+			video.classList.remove("hide");
+		}
+		function reportWindowScroll() {
+			videoExitHeight = document.querySelector(".hero-image").offsetTop;
+			if (
+				document.body.clientWidth >= 767 &&
+				window.pageYOffset <= videoExitHeight - 400
+			) {
+				video.classList.remove("hide");
+				video.play();
+				video.setAttribute("autoPlay", true);
+			} else {
+				video.classList.add("hide");
+				video.removeAttribute("autoPlay");
+				video.pause();
+			}
+		}
+		window.onscroll = reportWindowScroll;
 	}
 
 	render() {
@@ -50,7 +49,6 @@ class AboutUs extends React.Component {
 											src='https://www.googleapis.com/drive/v3/files/1yCCXHKThpBssiYB7GdDOWSDMRxy9yNSc?alt=media&key=AIzaSyDpA6LwdU5_jYnW_UUiW8iNYXSzpacBhGg'
 											loop
 											autoPlay
-											muted
 										></video>
 									</div>
 								</div>

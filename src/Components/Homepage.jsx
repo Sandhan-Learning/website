@@ -22,9 +22,10 @@ import tata_logo from "../images/Logos/tata.jpg";
 import indusind_logo from "../images/Logos/indusind.jpg";
 import vedanta_logo from "../images/Logos/vedanta.png";
 import Navbar from "./Navbar";
-import Modal from "./Modal";
+// import Modal from "./Modal";
 import Footer from "./Footer";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import HomeSlider from "./HomeSlider";
 
 class Header extends React.Component {
 	componentDidMount() {
@@ -55,37 +56,33 @@ class Header extends React.Component {
 	render() {
 		return (
 			<>
-				<div id='light'>
-					<a class='boxclose' id='boxclose'></a>
-					<video id='Video' width='900px'>
-						<source
-							src='https://www.googleapis.com/drive/v3/files/1pv2bnhYCQPluu24_54p7HHxW6x3hSNZe?alt=media&key=AIzaSyAuT4romdlgsj6PUHK2xoijJc2QU7NDyKk'
-							type='video/mp4'
-						></source>
-					</video>
-				</div>
-
 				<div class='inner'>
 					<h2>{this.props.title}</h2>
 					<a href='#' class='ghost-btn'>
-						<Link to="/chanakya">
-						<svg>
-							<defs>
-								<linearGradient>
-									<stop offset='0%' stop-color='#FF8282' />
-									<stop offset='100%' stop-color='#E178ED' />
-								</linearGradient>
-							</defs>
-							<rect
-								width='206'
-								height='50'
-								x='5'
-								y='5'
-								rx='25'
-								fill='none'
-								stroke='#0F5AF2'
-							></rect>
-						</svg>
+						<Link to='/chanakya'>
+							<svg>
+								<defs>
+									<linearGradient>
+										<stop
+											offset='0%'
+											stop-color='#FF8282'
+										/>
+										<stop
+											offset='100%'
+											stop-color='#E178ED'
+										/>
+									</linearGradient>
+								</defs>
+								<rect
+									width='206'
+									height='50'
+									x='5'
+									y='5'
+									rx='25'
+									fill='none'
+									stroke='#0F5AF2'
+								></rect>
+							</svg>
 						</Link>
 						<span>{this.props.buttonText}</span>
 					</a>
@@ -143,7 +140,7 @@ class OurUniqueness extends React.Component {
 	render() {
 		return (
 			<section>
-				<div>
+				<div style={{ paddingTop: "50px" }}>
 					<h3 className='unique'>OUR UNIQUENESS</h3>
 					<div>
 						<Uniqueness />
@@ -293,19 +290,23 @@ class Homepage extends React.Component {
 		return (
 			<>
 				<div class='transition-overlay'></div>
-				<Modal />
 
 				<div className='notPopup'>
 					<Navbar
 						videobg={<></>}
 						inner={
-							<Header
-								title={this.state.headerData.title}
-								buttonText={this.state.headerData.buttonText}
-								promoVideLink={
-									this.state.headerData.promoVideLink
-								}
-							/>
+							<>
+								<div id='light'>
+									<a class='boxclose' id='boxclose'></a>
+									<video id='Video' width='900px'>
+										<source
+											src='https://www.googleapis.com/drive/v3/files/1pv2bnhYCQPluu24_54p7HHxW6x3hSNZe?alt=media&key=AIzaSyAuT4romdlgsj6PUHK2xoijJc2QU7NDyKk'
+											type='video/mp4'
+										></source>
+									</video>
+								</div>
+								<HomeSlider />
+							</>
 						}
 					/>
 					<OurVision
