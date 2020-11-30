@@ -8,33 +8,41 @@ import InstituteCourses from "./Components/InstituteCourses";
 import CorporateCourses from "./Components/CorporateCourses";
 import Contact from "./Components/Contact";
 import Chanakya from "./Components/Chanakya";
+import Career from "./Components/Career";
+
+import HomeSlider from "./Components/HomeSlider";
 
 function App() {
 	return (
 		<>
 			<BrowserRouter>
 				<Switch>
-					<Route exact path='/' component={Homepage} />
-					<Route exact path='/about' component={AboutUs} />
-					<Route exact path='/experts' component={Experts} />
-					<Route
-						exact
-						path='/student-courses'
-						component={StudentCourses}
-					/>
-					<Route
-						exact
-						path='/institute-courses'
-						component={InstituteCourses}
-					/>
-					<Route
-						exact
-						path='/corporate-courses'
-						component={CorporateCourses}
-					/>
-					<Route exact path='/contact' component={Contact} />
+					<Route exact path='/'>
+						<Homepage />
+					</Route>
+					<Route exact path='/about'>
+						<AboutUs />
+					</Route>
+					<Route exact path='/experts'>
+						<Experts />
+					</Route>
+					<Route exact path='/student-courses'>
+						<StudentCourses />
+					</Route>
+					<Route exact path='/institute-courses'>
+						<InstituteCourses />
+					</Route>
+					<Route exact path='/corporate-courses'>
+						<CorporateCourses />
+					</Route>
+					<Route exact path='/contact'>
+						<Contact />
+					</Route>
 					<Route exact path='/chanakya'>
 						<Chanakya />
+					</Route>
+					<Route exact path='/career'>
+						<Career />
 					</Route>
 				</Switch>
 			</BrowserRouter>

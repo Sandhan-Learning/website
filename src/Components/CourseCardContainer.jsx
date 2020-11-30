@@ -34,8 +34,7 @@ const courseData = [
 	{
 		courseId: 2,
 		courseName: "Automobile Technology",
-		courseImg:
-			"https://i.pinimg.com/originals/e7/e1/ab/e7e1ab74164d65f632220bc32beab640.jpg",
+		courseImg: "https://vinodg.me/Resources/4.png",
 		courseDescription:
 			"For Engineering students with interest in Automobile.",
 		courseInstructorName: "Instructor",
@@ -45,8 +44,7 @@ const courseData = [
 	{
 		courseId: 3,
 		courseName: "Entrepreneurship",
-		courseImg:
-			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
+		courseImg: "https://vinodg.me/Resources/3.png",
 		courseDescription: "Program for people looking to establish startups.",
 		courseInstructorName: "Instructor",
 		courseRating: "Rating",
@@ -55,8 +53,7 @@ const courseData = [
 	{
 		courseId: 4,
 		courseName: "Pre-Placement Training",
-		courseImg:
-			"https://i.pinimg.com/originals/e7/e1/ab/e7e1ab74164d65f632220bc32beab640.jpg",
+		courseImg: "https://vinodg.me/Resources/2.png",
 		courseDescription:
 			"15 Days, 30 Days and 3 Months comprehensive training program with campus placement orientation for students.",
 		courseInstructorName: "Instructor",
@@ -66,8 +63,7 @@ const courseData = [
 	{
 		courseId: 5,
 		courseName: "Walkin Placement Training",
-		courseImg:
-			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
+		courseImg: "https://vinodg.me/Resources/1.png",
 		courseDescription:
 			"3 Months training program with job orientation for pass out students or students who are looking for better jobs.",
 		courseInstructorName: "Instructor",

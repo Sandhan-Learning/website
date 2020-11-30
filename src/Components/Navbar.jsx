@@ -1,8 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./styles/webpage.css";
+import "./styles/navbar.css";
 import sandhan_logo from "../images/Logos/sandhan_logo.png";
 import personality_illustration from "../images/personality_illustration.svg";
+import { Link } from "react-router-dom";
 
 class Navbar extends React.Component {
 	constructor() {
@@ -43,101 +44,64 @@ class Navbar extends React.Component {
 					<div class='menu'>
 						<ul class='navbar-nav'>
 							<li class='nav-item'>
-								<a href='/' class='nav-link transition'>
+								<Link class='nav-link transition' to='/'>
 									HOME
-								</a>
+								</Link>
 							</li>
 							<li class='nav-item'>
-								<a href='/about' class='nav-link transition'>
+								<Link class='nav-link transition' to='/about'>
 									ABOUT US
-								</a>
+								</Link>
 							</li>
 							<li class='nav-item'>
-								<a href='/experts' class='nav-link transition'>
+								<Link class='nav-link transition' to='/experts'>
 									EXPERTS
-								</a>
+								</Link>
 							</li>
 							<li class='nav-item'>
-								<a href='/' class='nav-link'>
+								<Link class='nav-link' to='/'>
 									PROGRAMS
-								</a>
+								</Link>
 								<ul>
 									<li>
-										<a
-											href='student-courses'
+										<Link
 											class='transition'
+											to='/student-courses'
 										>
 											STUDENTS
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a
-											href='/institute-courses'
+										<Link
 											class='transition'
+											to='/institute-courses'
 										>
 											INSTITUTES
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a
-											href='/corporate-courses'
+										<Link
 											class='transition'
+											to='/corporate-courses'
 										>
 											CORPORATE
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</li>
 							<li class='nav-item'>
-								<a href='/contact' class='nav-link transition'>
+								<Link class='nav-link transition' to='/contact'>
 									CONTACT US
-								</a>
+								</Link>
 							</li>
 						</ul>
-					</div>
-					<div class='inner'>
-						<h2>TOGETHER AT SANDHAN</h2>
-						<br></br>
-						<p>
-							No global movement springs from individuals. It
-							takes an entire team united behind something big.
-							Together we work hard, we laugh a lot, we brainstorm
-							non stop, we use hundreds of Post-Its a week, and we
-							give the best high-fives in town.
-						</p>
-						<p>
-							It’s an audacious, incredibly rewarding mission that
-							our increasingly diverse team is dedicated to
-							achieving.
-						</p>
-						<p>
-							Exciting challenges lie ahead—new regions,
-							technologies, and businesses. Guided by our core
-							values, we’ll meet these challenges creatively and
-							with the support of our community. Join us!
-						</p>
-						<br></br>
-						<a href='#' class='ghost-btn'>
-							<svg>
-								<rect
-									width='206'
-									height='50'
-									x='5'
-									y='5'
-									rx='25'
-									fill='none'
-									stroke='#2F2E41'
-								></rect>
-							</svg>
-							<span>Join Us!</span>
-						</a>
 					</div>
 				</aside>
 				<header class='header'>
 					{this.props.videobg}
 					<nav class='navbar'>
 						<div class='logo'>
-							<a href='/' class='transition'>
+							<Link to='/' class='transition'>
 								<img
 									src={sandhan_logo}
 									alt='Image'
@@ -148,7 +112,7 @@ class Navbar extends React.Component {
 									alt='Image'
 									class='logo-colored'
 								></img>
-							</a>
+							</Link>
 						</div>
 
 						<div
@@ -157,60 +121,62 @@ class Navbar extends React.Component {
 						>
 							<span></span> <span></span> <span></span>
 						</div>
-						<a href='#' class='custom-btn'>
-							CAREERS
+						<a href='#'>
+							<Link to='/career' class='custom-btn'>
+								CAREERS
+							</Link>
 						</a>
 						<ul class='navbar-nav'>
 							<li class='nav-item'>
-								<a href='/' class='nav-link transition'>
+								<Link class='nav-link transition' to='/'>
 									HOME
-								</a>
+								</Link>
 							</li>
 							<li class='nav-item'>
-								<a href='/about' class='nav-link transition'>
+								<Link class='nav-link transition' to='/about'>
 									ABOUT US
-								</a>
+								</Link>
 							</li>
 							<li class='nav-item'>
-								<a href='/experts' class='nav-link transition'>
+								<Link class='nav-link transition' to='/experts'>
 									EXPERTS
-								</a>
+								</Link>
 							</li>
 							<li class='nav-item'>
-								<a href='/' class='nav-link'>
+								<Link class='nav-link' to='/'>
 									PROGRAMS
-								</a>
+								</Link>
 								<ul>
 									<li>
-										<a
-											href='/student-courses'
+										<Link
 											class='transition'
+											to='/student-courses'
 										>
 											STUDENTS
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a
-											href='/institute-courses'
+										<Link
 											class='transition'
+											to='/institute-courses'
 										>
 											INSTITUTES
-										</a>
+										</Link>
 									</li>
 									<li>
-										<a
-											href='/corporate-courses'
+										<Link
 											class='transition'
+											to='/corporate-courses'
 										>
 											CORPORATE
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</li>
 							<li class='nav-item'>
-								<a href='/contact' class='nav-link transition'>
+								<Link class='nav-link transition' to='/contact'>
 									CONTACT US
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</nav>
