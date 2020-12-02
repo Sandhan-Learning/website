@@ -1,0 +1,159 @@
+/* reset, intilizing */
+
+:root {
+	--info: #3498db;
+	--primary: #2980b9;
+	--primary-dark: #20618b;
+	--warn: #ffa500; /* #ffc600; */
+	--warn-dark: #aa7511;
+	--secondary: #929292;
+	--gray: #333;
+	--light: #ececec;
+	--dark: #3c3c3c;
+	/* additional colors */
+	--magenta: #6a5acd;
+	--light-second: #949a98;
+	--dark-second: #11313c;
+	--rose: #f7746e;
+	--gold: #e6c356;
+}
+
+
+img {
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+img.full {
+	width: 100%;
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+/* cide */
+
+.sectionn {
+    padding-left: 50px;
+	display: block;
+	position: relative;/*
+	margin: 9px;
+	margin-top: 1.5rem;
+	padding: 16px;
+	border: 1.3px solid var(--secondary);
+	border-radius: 3px;*/
+
+}
+
+.sectionn > .label-name {
+	position: absolute;
+	top: -0.6rem;
+	left: 0.6rem;
+	font-family: "ubuntu light";
+	font-weight: bold;
+	background-color: white;
+}
+.share-bar ul {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+.share-bar ul > li {
+	list-style: none;
+	padding: 0;
+}
+.share-bar a {
+	display: block;
+	text-decoration: none;
+	color: #ccc;
+	cursor: pointer;
+}
+
+.share-bar {
+    display: inline-flex;
+    box-shadow: 2px 0.5px 32px -6px rgba(102, 100, 100, 0.658);
+
+}
+.btn-share {
+	display: inline-block;
+}
+.share-bar > input[type="checkbox"] {
+	display: none;
+}
+
+.share-bar {
+	height: 51px;
+	border-radius: 1.8rem;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	background-color: rgb(83, 3, 43);
+	color: whitesmoke;
+	font-size: 2rem;
+	text-align: center;
+	overflow: hidden;
+}
+
+.btn-share {
+/*	padding: 0.3rem;*/
+	background-color: #936;
+	width: 52px;
+	height: 77px;
+	overflow: hidden;
+    cursor: pointer;
+    padding:15px;
+}
+.btn-share i {
+	transition: 0.6s ease transform;
+}
+.btn-share i.fa-share-alt {
+	transform: scale(1) translate(0);
+}
+.btn-share i.fa-close {
+    padding-bottom: 10px;
+	transform: scale(0) translateY(25%);
+}
+
+.share-list {
+	width: 0;
+	overflow: hidden;
+    transition: 0.5s;
+    padding-bottom: 10px;
+}
+
+.share-list > ul {
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+.share-list > ul > li a {
+	width: 55px;
+	height: 55px;
+	padding: 9px;
+}
+
+/*  */
+.btn-share:hover > i,
+.btn-share:focus > i,
+.btn-share:active > i {
+	color: #fffc;
+}
+.share-bar > input[type="checkbox"]:checked ~ .btn-share {
+	box-shadow: 3px 3px 9px rgba(3, 3, 3, 0.6);
+}
+.share-bar > input[type="checkbox"]:checked ~ .btn-share i.fa-share-alt {
+	transform: scale(0) translate(-25%);
+}
+.share-bar > input[type="checkbox"]:checked ~ .btn-share i.fa-close {
+	transform: scale(1) translateY(-115%);
+}
+.share-bar > input[type="checkbox"]:checked ~ .share-list,
+.share-list:hover {
+	width: 290px;
+	background-color: transparent;
+}
+.share-list > ul > li a:hover,
+.share-list > ul > li a:focus,
+.share-list > ul > li a:active {
+	background-color: #ccc;
+	color: #333;
+}
