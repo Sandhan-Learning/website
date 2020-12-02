@@ -82,14 +82,18 @@
 }
 
 /*  */
-
+.homes span{
+	font-weight: bold;
+}
 .homes {
 	margin-left: 90px;
 	margin-right: 90px;
 	/*  border: 1px solid black;*/
 	margin-bottom: 50px;
-	background-color: #bfdbf7;
+background-color: #bfdbf7;
 	/*  background-color: #E6EBE0;*/
+	white-space: pre-line;
+	vertical-align: bottom;
 }
 .homes h1 {
 	margin-bottom: 61px;
@@ -131,6 +135,7 @@
     margin-right: 50px;*/
 	/* color: white;*/
 	color: black;
+	line-height: 1.7em;
 }
 .homes img {
 	height: 40vh;
@@ -144,7 +149,7 @@
 	.fourth,
 	.second,
 	.third {
-		width: 90%;
+		width: 86%;
 		margin-left: 26px;
 		padding-bottom: 1px;
 	}

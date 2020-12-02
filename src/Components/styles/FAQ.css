@@ -92,10 +92,14 @@ code {
 		font-weight: 400;
 	}
 	.unique {
-		margin-left: 45%;
-		transform: translateX(-50%);
-		text-align: center;
+		
+	font-size: 43px;
+    margin-left: 43%;
+  /*  transform: translateX(-71%);*/
+    text-align: center;
 	}
+
+	
 }
 
 .faqs .faq.open .faq-question::after {

@@ -26,6 +26,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import HomeSlider from "./HomeSlider";
+import ShareBar from "./ShareBar";
 
 class Header extends React.Component {
 	componentDidMount() {
@@ -305,6 +306,7 @@ class Homepage extends React.Component {
 										></source>
 									</video>
 								</div>
+									<div className="socialMedias"><ShareBar/></div>
 								<HomeSlider />
 							</>
 						}
