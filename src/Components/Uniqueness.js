@@ -1,38 +1,38 @@
 import React from "react";
 import Tabs from "./Tabs";
-import Innovation from "../images/innovation.png";
-import Values from "../images/values.png";
-import Leadership from "../images/leadership.png";
-import Responsibility from "../images/responsibility.png";
+import Innovation from "../images/Uniqueimages/Innovation.png";
+import Values from "../images/Uniqueimages/valuesfinal.png";
+import Leadership from "../images/Uniqueimages/Leadershipfinal.png";
+import Responsibility from "../images/Uniqueimages/Responsibilityfinal.png";
 
 import "./styles/Uniqueness.css";
 
 function Uniqueness() {
 	const mystyle = {
 		marginTop: "-262px",
-		marginLeft: "935px",
+		marginLeft: "800px",
 		marginBottom: "37px",
 	};
 	const mystyle2 = {
 		paddingBottom: "64px",
-		marginLeft: "980px",
-		height: "50vh",
+		marginLeft: "952px",
+		height: "70vh",
 		marginRight: "61px",
-		marginTop: "-337px",
+		marginTop: "-347px",
 	};
 	const mystyle3 = {
 		marginLeft: "980px",
-		height: "40vh",
+		height: "45vh",
 		marginRight: " 61px",
 		marginTop: "-292px",
 		marginBottom: "51px",
 	};
 	const mystyle4 = {
 		paddingBottom: "73px",
-		height: "45vh",
-		marginLeft: "943px",
+		height: "50vh",
+		marginLeft: "880px",
 		marginRight: "61px",
-		marginTop: "-325px",
+		marginTop: "-371px",
 	};
 	const mystyle5 = {
 		color: "white",

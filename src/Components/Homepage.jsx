@@ -140,7 +140,7 @@ class OurVision extends React.Component {
 class OurUniqueness extends React.Component {
 	render() {
 		return (
-			<section>
+			<section className="uniqueness_section">
 				<div style={{ paddingTop: "50px" }}>
 					<h3 className='unique'>OUR UNIQUENESS</h3>
 					<div>
@@ -151,7 +151,6 @@ class OurUniqueness extends React.Component {
 		);
 	}
 }
-
 class OurCourses extends React.Component {
 	render() {
 		return (
