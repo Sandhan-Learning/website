@@ -8,7 +8,7 @@
 	padding-bottom: 10px;
 	padding-left: 390px;
 	font-weight: 700;
-	background-color: white;
+	background-color:#f4f7fa;
 	color: white;
 }
 @media screen and (max-width: 800px) {
@@ -90,16 +90,17 @@
 	margin-right: 90px;
 	/*  border: 1px solid black;*/
 	margin-bottom: 50px;
-background-color: #bfdbf7;
+/*background-color: #bfdbf7;*/
 	/*  background-color: #E6EBE0;*/
 	white-space: pre-line;
 	vertical-align: bottom;
+	background-image: url("/src/images/banner-bg2.jpg");
 }
 .homes h1 {
 	margin-bottom: 61px;
 }
 .first {
-	margin-top: 127px;
+	margin-top: 85px;
 	margin-right: 556px;
 	/* color: black;*/
 
@@ -129,7 +130,7 @@ background-color: #bfdbf7;
 }
 .homes p {
 	/*  margin-top: 140px;*/
-	font-size: 19px;
+	font-size: 14px;
 	font-weight: 500;
 	/*  margin-left: 30px;
     margin-right: 50px;*/
@@ -138,7 +139,7 @@ background-color: #bfdbf7;
 	line-height: 1.7em;
 }
 .homes img {
-	height: 40vh;
+	height: 50vh;
 	margin-right: 61px;
 	margin-top: 100px;
 }
