@@ -1,5 +1,6 @@
 import React from "react";
 import CourseCard from "./CourseCard";
+import Test from "./Test";
 import "./styles/course-card-container.css";
 
 import SwiperCore, {
@@ -24,9 +25,10 @@ const courseData = [
 	{
 		courseId: 1,
 		courseName: "Chanakya",
-		courseImg:
-			"https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg",
-		courseDescription: "For students of Graduation, Engineering and MBA.",
+		courseImg: "https://vinodg.me/Resources/5.png",
+		courseDescription:
+			"Learn from Industry experts from many domains and develop 360 degree skills and 100% employment.",
+		courseDescription2: "For Graduation, Engineering and MBA.",
 		courseInstructorName: "Instructor",
 		courseRating: "Rating",
 		coursePrice: "",
@@ -36,7 +38,9 @@ const courseData = [
 		courseName: "Automobile Technology",
 		courseImg: "https://vinodg.me/Resources/4.png",
 		courseDescription:
-			"For Engineering students with interest in Automobile.",
+			"Make yourself eligible for all the Automobile companies by learning everything about automobiles and Industry by Industry experts.",
+		courseDescription2:
+			"For engineering students with an interest in Automobile.",
 		courseInstructorName: "Instructor",
 		courseRating: "Rating",
 		coursePrice: " ",
@@ -45,7 +49,9 @@ const courseData = [
 		courseId: 3,
 		courseName: "Entrepreneurship",
 		courseImg: "https://vinodg.me/Resources/3.png",
-		courseDescription: "Program for people looking to establish startups.",
+		courseDescription:
+			"Learn everything about entrepreneurship by established entrepreneurs. Only program which offers complete entrepreneurship development.",
+		courseDescription2: "For people aspiring to be Entrepreneurs",
 		courseInstructorName: "Instructor",
 		courseRating: "Rating",
 		coursePrice: " ",
@@ -55,7 +61,8 @@ const courseData = [
 		courseName: "Pre-Placement Training",
 		courseImg: "https://vinodg.me/Resources/2.png",
 		courseDescription:
-			"15 Days, 30 Days and 3 Months comprehensive training program with campus placement orientation for students.",
+			"Last step of education before the corporate life. Learn about recruitment by Industry experts and Crack your campus placements with confidence and higher packages.",
+		courseDescription2: "Duration: 15 days, 30 days & 3 months",
 		courseInstructorName: "Instructor",
 		courseRating: "Rating",
 		coursePrice: " ",
@@ -65,7 +72,9 @@ const courseData = [
 		courseName: "Walkin Placement Training",
 		courseImg: "https://vinodg.me/Resources/1.png",
 		courseDescription:
-			"3 Months training program with job orientation for pass out students or students who are looking for better jobs.",
+			"Learn everything about Interviews by Human resource experts and crack jobs easily. The program offers 100% Job orientation..",
+		courseDescription2:
+			"Who can apply: People who are looking for better jobs.",
 		courseInstructorName: "Instructor",
 		courseRating: "Rating",
 		coursePrice: " ",
@@ -73,16 +82,25 @@ const courseData = [
 ];
 
 class CourseCardContainer extends React.Component {
+	constructor() {
+		super();
+		this.prevRef = React.createRef();
+		this.nextRef = React.createRef();
+	}
 	render() {
 		return (
 			<>
 				<Swiper
 					className='swiper-container'
+					spaceBetween={10}
 					slidesPerView={4}
 					loop={true}
 					autoplay={{ delay: 5000, disableOnInteraction: true }}
 					// scrollbar={{ draggable: true }}
 					// centeredSlides={true}
+					pagination={{
+						clickable: true,
+					}}
 					preloadImages={true}
 					updateOnImagesReady={true}
 					breakpoints={{
@@ -90,10 +108,10 @@ class CourseCardContainer extends React.Component {
 							slidesPerView: 1,
 						},
 						"@0.75": {
-							slidesPerView: 1,
+							slidesPerView: 2,
 						},
 						"@1.00": {
-							slidesPerView: 2,
+							slidesPerView: 3,
 						},
 						"@1.50": {
 							slidesPerView: 4,
@@ -102,11 +120,14 @@ class CourseCardContainer extends React.Component {
 				>
 					{courseData.map((course) => (
 						<SwiperSlide key={course["courseId"]}>
-							<CourseCard
+							<Test
 								courseId={course["courseId"]}
 								courseName={course["courseName"]}
 								courseImg={course["courseImg"]}
 								courseDescription={course["courseDescription"]}
+								courseDescription2={
+									course["courseDescription2"]
+								}
 								courseInstructorName={
 									course["courseInstructorName"]
 								}

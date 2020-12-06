@@ -1,76 +1,68 @@
-import React, { useEffect, useRef } from "react";
-import Swiper from "swiper";
-import "swiper/swiper.scss";
+import React from "react";
 import "./styles/test.css";
-import CourseCard from "./CourseCard";
-import fire from "../firebaseIndex";
-const Test = () => {
-	let tempState = [];
-	const courseMetaDataRef = fire.database().ref("courseMetaData");
 
-	courseMetaDataRef.on("value", (snapshot) => {
-		let coursesMeta = snapshot.val();
-		for (let course in coursesMeta) {
-			tempState.push({
-				courseId: coursesMeta[course].courseId,
-				courseName: coursesMeta[course].courseName,
-				courseImg: coursesMeta[course].courseImg,
-				courseDescription: coursesMeta[course].courseDescription,
-				courseInstructorName: coursesMeta[course].courseInstructorName,
-				courseRating: coursesMeta[course].courseRating,
-				coursePrice: coursesMeta[course].coursePrice,
-			});
-		}
-	});
-
-	const swiper = useRef(null);
-	useEffect(() => {
-		swiper.current = new Swiper(".swiper-container", {
-			observer: true,
-			observeParents: true,
-			loop: true,
-			spaceBetween: 10,
-			slidesPerView: 4,
-			freeMode: true,
-			watchSlidesVisibility: true,
-			watchSlidesProgress: true,
-		});
-		//add necessary parameters required by checking the offical docs of swiper
-	}, []);
-
-	swiper.update();
-	return (
-		<div className='swiper-container'>
-			<div className='swiper-wrapper'>
-				{tempState.map((course) => (
-					<div className='swiper-slide'>
-						<CourseCard
-							courseId={course["courseId"]}
-							courseName={course["courseName"]}
-							courseImg={course["courseImg"]}
-							courseDescription={course["courseDescription"]}
-							courseInstructorName={
-								course["courseInstructorName"]
-							}
-							courseRating={course["courseRating"]}
-							coursePrice={course["coursePrice"]}
-						/>
+class Test extends React.Component {
+	render() {
+		return (
+			<div class='course-wrapper white-bg mb-50'>
+				<div class='course-inner'>
+					<div class='course-img pos-rel mb-25'>
+						<a href=''>
+							<img src={this.props.courseImg} alt='' />
+						</a>
 					</div>
-				))}
-				<div className='swiper-slide'>
-					<CourseCard
-						courseId='5'
-						courseName='Walkin Placement Training'
-						courseImg='https://i.pinimg.com/originals/fe/45/86/fe4586e100b6772e65c12a95048803ae.jpg'
-						courseDescription='3 Months training program with job orientation for pass out students or students who are looking for better jobs.'
-						courseInstructorName='Instructor'
-						courseRating='Rating'
-						coursePrice=' '
-					/>
+					<div class='course-text'>
+						<div class='course-cat-meta d-flex align-items-center mb-15'>
+							<span>
+								<a href=''>STUDENT</a>
+							</span>
+							<div class='review-icon'>
+								<a href='#'>
+									<i class='fa fa-star'></i>
+								</a>
+								<a href='#'>
+									<i class='fa fa-star'></i>
+								</a>
+								<a href='#'>
+									<i class='fa fa-star'></i>
+								</a>
+								<a href='#'>
+									<i class='fa fa-star'></i>
+								</a>
+								<a href='#'>
+									<i class='fa fa-star'></i>
+								</a>
+							</div>
+						</div>
+
+						<h4 class='semi-title pb-10 mb-10'>
+							<a href=''>{this.props.courseName}</a>
+						</h4>
+						<div class='course-meta'>
+							<p>{this.props.courseDescription2}</p>
+						</div>
+					</div>
+				</div>
+				<div class='course-text course-text-02 theme-bg'>
+					<h4 class='semi-title mb-20'>
+						<a style={{ textDecoration: "none", color: "#fff" }}>
+							{this.props.courseName}
+						</a>
+					</h4>
+
+					<p class='pb-10 mb-10'>{this.props.courseDescription}</p>
+					<p class='pb-10 mb-10'>{this.props.courseDescription2}</p>
+					<a
+						class='c-btn mb-40'
+						href={this.props.enrollLink}
+						style={{ textDecoration: "none" }}
+					>
+						get enrolled <i class='fa fa-arrow-right'></i>
+					</a>
 				</div>
 			</div>
-		</div>
-	);
-};
+		);
+	}
+}
 
 export default Test;

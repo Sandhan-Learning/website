@@ -94,8 +94,8 @@ code {
 	.unique {
 		
 	font-size: 43px;
-    margin-left: 43%;
-  /*  transform: translateX(-71%);*/
+    margin-left: 50%;
+    transform: translateX(-71%);
     text-align: center;
 	}
 

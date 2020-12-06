@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
 /* HAMBURGER MENU BOX */
 .hamburger-menu-box {
 	width: 100%;
@@ -12,7 +14,7 @@
 	top: 0;
 	opacity: 0;
 	visibility: hidden;
-	z-index: 5;
+	z-index: 101;
 	-webkit-transition: 0.25s ease-in-out;
 	-moz-transition: 0.25s ease-in-out;
 	-ms-transition: 0.25s ease-in-out;
@@ -103,32 +105,32 @@
 	background-color: #f4f7fa;
 }
 .header .inner {
-	width: 40%;
+	width: 50%;
 	position: absolute;
 	left: 7%;
 	top: 30%;
 	z-index: 3;
 }
 .header .illustration {
-	width: 50%;
+	max-width: 40%;
 	position: absolute;
 	right: 0%;
-	top: 50%;
+	top: 55%;
 	transform: translateY(-50%);
 	z-index: 3;
 }
 .header .inner h2 {
-	font-size: 4.25em;
-	font-weight: 700;
+	font-size: 55px;
+	font-weight: 300;
 	color: #2f2e41;
-	font-family: "Fjalla One";
+	font-family: "Oswald";
 	margin-bottom: 50px;
 }
-.header .inner p {
-	color: #fff;
-	line-height: 26px;
-	margin-bottom: 50px;
+.header .inner h2 strong {
+	color: #192534;
+	font-weight: 500;
 }
+
 .header .inner .ghost-btn span {
 	background: none;
 	-webkit-text-fill-color: #2f2e41;
@@ -162,7 +164,7 @@
 	padding-top: 20px;
 	text-align: center;
 	position: relative;
-	z-index: 9;
+	z-index: 101;
 	-webkit-transition: 0.25s ease-in-out;
 	-moz-transition: 0.25s ease-in-out;
 	-ms-transition: 0.25s ease-in-out;
@@ -185,7 +187,7 @@
 	position: fixed;
 	background: #fff;
 	background-size: auto 5px;
-	z-index: 9;
+	z-index: 102;
 }
 
 .navbar .custom-btn {
@@ -352,7 +354,7 @@
 		margin-left: 0;
 	}
 	.header .inner h2 {
-		font-size: 50px;
+		font-size: 40px;
 	}
 }
 /* RESPONSIVE TABLET FIXES */
@@ -399,7 +401,7 @@
 		left: 0;
 	}
 	.header .inner h2 {
-		font-size: 2.75em;
+		font-size: 1.85em;
 	}
 	.hamburger-menu-box .menu .navbar-nav .nav-item .nav-link {
 		font-size: 17px;

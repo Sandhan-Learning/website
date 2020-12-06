@@ -59,35 +59,30 @@ class Navbar extends React.Component {
 								</Link>
 							</li>
 							<li class='nav-item'>
-								<Link class='nav-link' to='/'>
-									PROGRAMS
+								<Link class='transition' to='/student-courses'>
+									STUDENTS
 								</Link>
-								<ul>
-									<li>
-										<Link
-											class='transition'
-											to='/student-courses'
-										>
-											STUDENTS
-										</Link>
-									</li>
-									<li>
-										<Link
-											class='transition'
-											to='/institute-courses'
-										>
-											INSTITUTES
-										</Link>
-									</li>
-									<li>
-										<Link
-											class='transition'
-											to='/corporate-courses'
-										>
-											CORPORATE
-										</Link>
-									</li>
-								</ul>
+							</li>
+							<li>
+								<Link
+									class='transition'
+									to='/institute-courses'
+								>
+									INSTITUTES
+								</Link>
+							</li>
+							<li>
+								<Link
+									class='transition'
+									to='/corporate-courses'
+								>
+									CORPORATE
+								</Link>
+							</li>
+							<li class='nav-item'>
+								<Link class='nav-link transition' to='/'>
+									CAREERS
+								</Link>
 							</li>
 							<li class='nav-item'>
 								<Link class='nav-link transition' to='/contact'>
@@ -122,7 +117,8 @@ class Navbar extends React.Component {
 							<span></span> <span></span> <span></span>
 						</div>
 						<a href='#'>
-							<Link to='/career' class='custom-btn'>
+							{/* Update career link later */}
+							<Link to='' class='custom-btn'>
 								CAREERS
 							</Link>
 						</a>

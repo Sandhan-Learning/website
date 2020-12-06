@@ -9,6 +9,8 @@ class CourseCardFront extends React.Component {
 				<div class='info'>
 					<h2>{this.props.courseName}</h2>
 					<p>{this.props.courseDescription}</p>
+					<br />
+					<p>{this.props.courseDescription2}</p>
 				</div>
 			</div>
 		);
@@ -71,6 +73,7 @@ class CourseCard extends React.Component {
 							courseName={this.props.courseName}
 							courseImg={this.props.courseImg}
 							courseDescription={this.props.courseDescription}
+							courseDescription2={this.props.courseDescription2}
 						/>
 						<CourseCardBack
 							courseInstructorName={

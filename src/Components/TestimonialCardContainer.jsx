@@ -53,18 +53,12 @@ class TestimonialCard extends React.Component {
 						alt='Quotation'
 						class='quotation'
 					></img>
-					<h3 class='heading'>
-						<em>{this.props.testimonyHeading}</em>
-					</h3>
-					<p class='para'>
-						<em>{this.props.testimony}</em>
-					</p>
+					<h3 class='heading'>{this.props.testimonyHeading}</h3>
+					<p class='para'>{this.props.testimony}</p>
 					<div class='testimonials-by'>
-						<h4 class='name'>
-							<em>{this.props.customerName}</em>
-						</h4>
+						<h4 class='name'>{this.props.customerName}</h4>
 						<span class='designation'>
-							<em>{this.props.customerTitle}</em>
+							{this.props.customerTitle}
 						</span>
 					</div>
 				</li>
