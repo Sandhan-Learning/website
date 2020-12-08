@@ -9,6 +9,7 @@ import CorporateCourses from "./Components/CorporateCourses";
 import Contact from "./Components/Contact";
 import Chanakya from "./Components/Chanakya";
 import Career from "./Components/Career";
+import Startup from "./Components/Startup";
 
 function App() {
 	return (
@@ -41,6 +42,9 @@ function App() {
 					</Route>
 					<Route exact path='/career'>
 						<Career />
+					</Route>
+		                        <Route exact path='/knowmore'>
+						<Startup/>
 					</Route>
 				</Switch>
 			</BrowserRouter>
