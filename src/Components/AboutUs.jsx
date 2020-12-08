@@ -189,7 +189,7 @@ class AboutUs extends React.Component {
 												approach in their teaching.
 											</p>
 											<Link
-												to='/chanakya'
+												to='/knowmore'
 												class='ghost-btn'
 											>
 												<svg>
@@ -215,7 +215,7 @@ class AboutUs extends React.Component {
 														stroke='#0F5AF2'
 													></rect>
 												</svg>
-												<span>Enroll Now</span>
+												<span>Know More</span>
 											</Link>
 											<br />
 											<br />
