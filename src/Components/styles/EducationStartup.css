@@ -1,0 +1,52 @@
+.educationstartup{
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.7em;
+}
+.educationtext1{
+    margin-top: 50px;
+}
+.startup_image img{
+    margin-top: 20px;
+    margin-left: 310px;
+    height: 60vh;
+    text-align: center;
+}
+.educationtext2{
+    margin-top: 80px;
+}
+.educationtext2 span{
+    font-weight: bold;
+}
+.educationtext2_para{
+    margin-top: 40px;
+}
+.educationtext3{
+    margin-top: 30px;
+}
+.educationtext3 h3{
+    font-weight: bold;
+}
+.educationtext3 span{
+     font-weight: bold;
+}
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+        .educationstartup{
+            margin-left: 20px !important;
+            margin-right:20px !important;
+        }
+        .educationstartup h1{
+            transform: unset !important;
+            text-align: center !important;
+            margin-left: 0px !important;
+        }
+        .startup_image img{
+            margin-top: 30px;
+            height: 35vh;
+            margin-left: 0 !important;
+        }
+    }

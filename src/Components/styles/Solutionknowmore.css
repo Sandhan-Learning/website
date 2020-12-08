@@ -1,0 +1,35 @@
+.solutionknowmore h1{
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 50px;
+    transform:none;
+    font-size: 32px;
+    text-transform:none;
+    padding-left: 20px;
+    padding-top: 50px;
+    text-transform: uppercase;
+
+}
+.solutionknowmore{
+    margin-top: 100px;
+}
+.solutionknowmore_para p{
+    font-weight: 500;
+    line-height: 2em;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    font-size: 15px;;
+}
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+        .solutionknowmore_para p{
+            margin-left: 20px;
+            margin-right: 0 !important;
+            
+        }
+        .solutionknowmore h1{
+            font-size: 26px !important;
+        }
+
+    }

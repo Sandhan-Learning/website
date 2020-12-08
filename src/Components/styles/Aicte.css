@@ -1,0 +1,48 @@
+.aicte{
+    margin-top: 150px;
+ 
+}
+.aicte_texts{
+    margin-right: 100px;
+    margin-left: 100px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.7em;
+    margin-top: 70px;
+}
+.aicte_text1{
+    margin-top: 20px;
+}
+.aicte_text2{
+    margin-top: 30px;
+}
+.aicte_text3{
+    margin-top: 50px;
+}
+.aicte_text4{
+    margin-top: 30px;
+}
+.aicte_text5{
+    margin-top: 20px;
+}
+.aicte_text6{
+    margin-top: 40px;
+}
+.aictetext_para{
+    font-weight: bold;
+}
+.aicte_text6 img{
+    margin-top: 40px;
+}
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+        .aicte_texts{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .aicte h1{
+            margin-left: unset !important;
+            transform: unset !important;
+            font-size: 26px;
+        }
+    }

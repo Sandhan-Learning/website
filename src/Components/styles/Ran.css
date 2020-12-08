@@ -1,0 +1,20 @@
+/*li {
+	line-height: 28px;
+}
+
+ul {
+	padding-left: 15px;
+}*/
+.icon-list {
+	list-style: none;
+	padding: 0;
+}
+.icon-list i {
+	padding-right: 10px;
+	font-size: 15px;
+}
+
+.list-blue i,
+.list-blue > li:before {
+	color: #0f5af2;
+}
