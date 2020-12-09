@@ -1,0 +1,9 @@
+.startup_header header{
+    height: 13vh;
+}
+.startup{
+    background-color: #f4f7fa;
+}
+.startup span{
+    font-weight: bold;
+}

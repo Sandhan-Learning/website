@@ -1,0 +1,43 @@
+.table td,
+.table th,
+.table thead th {
+	border-color: #dbdcde;
+}
+.table thead th {
+	border-bottom-width: 1px;
+}
+.table tbody {
+	border-bottom: 1px solid #dbdcde;
+}
+.tables{
+	margin-top: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
+	overflow-x: scroll;
+}
+
+.table{
+	margin-top: 30px;
+}
+.table_downpara{
+	margin-top: 70px;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 1.7em;
+}
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+		.tablesection h1{
+	   margin-left: unset !important;
+	   transform: unset !important;
+	   font-size: 26px;
+}
+.tables{
+	margin-left:0px !important;
+	margin-right: 0px !important;
+}
+.table_downpara{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+	}

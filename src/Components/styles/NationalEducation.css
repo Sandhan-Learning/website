@@ -1,0 +1,76 @@
+.nationaleducation_display{
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+}
+.nationaleducation{
+    margin-top: 100px;
+}
+.nationaleducation_text{
+    padding-left: 170px;
+}
+.nationaleducation_image img{
+    margin-top: -87px;
+    height: 80vh;
+    margin-right: 92px;
+    object-fit: unset !important;
+    max-width: unset !important;
+    vertical-align: unset !important;
+}
+.nationaleducation h1{
+    font-size: 32px;
+}
+
+.nationaleducation_text ul{
+    line-height: 2em;
+    font-size: 15px;
+    font-weight: 500;
+}
+.nationaleducation_text p{
+    line-height: 1.5em;
+    font-size: 15px;
+    font-weight: 500;
+}
+.reference{
+    display: flex;
+    margin-left: 100px;
+}
+.reference a{
+    margin-left: 10px;
+    margin-top: 20px;
+
+}
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+        .nationaleducation_display{
+    display: flex;
+    flex-direction: column;
+        }
+        .nationaleducation_text{
+    padding-left: 16px;
+}
+.nationaleducation_image img{
+    margin-top: -60px;
+
+    height: 45vh;
+}
+.nationaleducation h1{
+    font-size: 28px !important;
+    transform: none !important;
+    margin-left: unset !important;
+}
+    }
+@media only screen and (max-width: 991px),
+	only screen and (max-device-width: 991px) {
+        .nationaleducation_display{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    @media only screen and (max-width: 1169px),
+	only screen and (max-device-width: 1169px) {
+           .nationaleducation_display{
+            display: flex;
+            flex-direction: column;
+        }
+    }

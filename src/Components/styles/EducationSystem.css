@@ -1,0 +1,58 @@
+.educationsystem h1{
+    text-align: center;
+    margin-left: 0;
+    transform:none;
+    font-size: 32px;
+    text-transform:none;
+    padding-left: 20px;
+    padding-top: 50px;
+    text-transform: uppercase;
+
+}
+.educationsystem_display{
+    display: flex;
+    margin-top: 50px;
+}
+.educationsystem_text ul{
+    line-height: 2em;
+    font-size: 15px;
+    font-weight: 500;
+    padding-right: 50px;
+    margin-left: 20px;
+}
+.educationsystem_image img{
+    height:none;
+}
+
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+        .educationsystem_display{
+            display: flex;
+            flex-direction: column;
+
+        }
+        .educationsystem h1{
+            font-size: 27px;
+        }
+        .educationsystem_text ul{
+            margin-top: 50px;
+        }
+    }
+    @media only screen and (max-width: 991px),
+	only screen and (max-device-width: 991px) {
+           .educationsystem_display{
+            display: flex;
+            flex-direction: column;
+
+        }
+     
+    }
+        @media only screen and (max-width: 1169px),
+	only screen and (max-device-width: 1169px) {
+            .educationsystem_display{
+            display: flex;
+            flex-direction: column;
+
+        }
+
+    }

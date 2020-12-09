@@ -1,0 +1,39 @@
+.benefits_display{
+    display: flex;
+    margin-top: 50px;
+}
+.benefitsprogram_image img{
+    height: 50vh;
+    margin-left: 172px;
+}
+.benefitsprogram_text{
+    margin-top: 110px;
+    line-height: 2em;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 50px;
+}
+.benefitsprogram{
+    margin-top: 100px;
+}
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+        .benefits_display{
+    display: flex;
+    flex-direction: column-reverse;
+}.benefitsprogram_image img{
+    height: 30vh;
+    margin-left: 24px;
+}
+.benefitsprogram h1{
+    margin-left: none;
+    transform: unset;
+    font-size: 30px;
+    margin-left: 10px;
+}
+.benefitsprogram_text{
+    margin-left: 20px;
+    margin-top: 10px;
+
+}
+    }
