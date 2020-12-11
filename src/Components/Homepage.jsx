@@ -198,7 +198,7 @@ class CoachesFrom extends React.Component {
 						<div class='col-12'>
 							<div class='titles'>
 								<span class='title-bg'></span>
-								<h3>Our experts coaches are from</h3>
+								<h3>Our expert coaches are from</h3>
 							</div>
 							<ul>
 								<li>

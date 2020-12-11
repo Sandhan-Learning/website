@@ -558,6 +558,9 @@ button[type="submit"] {
 	.clients ul li {
 		width: 33.33333%;
 	}
+	.socialMedias {
+		display: none;
+	}
 	#light video {
 		width: 90vw !important;
 	}
@@ -591,6 +594,9 @@ button[type="submit"] {
 		width: calc(100% - 60px);
 		margin: 0 30px;
 		margin-bottom: 30px;
+	}
+	.socialMedias {
+		display: none;
 	}
 	.clients ul li {
 		padding: 5px;
@@ -681,6 +687,6 @@ button[type="submit"] {
 		height: 350px;
 	}
 }
-.uniqueness_section{
+.uniqueness_section {
 	background-color: #f4f7fa;
 }

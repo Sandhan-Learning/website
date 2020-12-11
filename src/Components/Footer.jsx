@@ -100,7 +100,10 @@ class Footer extends React.Component {
 										</a>
 									</li>
 									<li>
-										<a target='_blank' href=''>
+										<a
+											target='_blank'
+											href='https://www.youtube.com/channel/UCxqgTMdgK8pYiWqglhMFV3g?view_as=subscriber'
+										>
 											<i class='fa fa-youtube fa-2x'></i>
 										</a>
 									</li>
