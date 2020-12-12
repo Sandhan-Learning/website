@@ -36,7 +36,6 @@ class Navbar extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.videobg);
 		return (
 			<>
 				<div class='transition-overlay'></div>

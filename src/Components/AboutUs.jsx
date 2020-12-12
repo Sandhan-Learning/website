@@ -7,53 +7,76 @@ import team01 from "../images/About/team01.jpg";
 import { ExpertCard } from "./Experts";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
+import fire from "../firebaseIndex";
 
-const expertData = [
-	{
-		expertName: "Vikrant Biswal",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
-		expertDescription:
-			"There is a very thin line between literacy and education. Your 16-20 years of academics will be considered as meaningless if someone is unable use it for the betterment of self, society and the nation. Once someone know how to use his/her knowledge towards development the person will be considered as educated.",
-		expertDescription2:
-			"At Sandhan, we are not only committed however we brought highly skilled Industry experts as educators and mentors to help students to bridge the gap of skills provided by institute and required by organizations and to make them highly successful in careers by our various programs.",
-		expertPosition: "Co-founder and IIM Lucknow Alumni",
-		expertDomain: "Management",
-		expertAOE:
-			"Human resource, Training and development, Organization development, people management, Strategic management, skill upgradation and many more",
-		expertYear: "12",
-		expertTwitter: "",
-		expertLinkedin: "",
-	},
-	{
-		expertName: "Jitender Kumar",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
-		expertDescription:
-			"Mr. Kumar is merchant Navy professional, a hard core Engineer, a passionate entrepreneur and a great mentor. Graduated from Singapore maritime academy Mr. Kumar Worked with several International merchant navy companies like MERSK sea line and achieved epitome of career in a very short span of time.",
-		expertDescription2: "",
-		expertPosition: "Lead educator and Entrepreneur",
-		expertDomain: "Management",
-		expertAOE:
-			"Mechanical Engineering, Electrical engineering, Ship maintenance, Entrepreneurship and many more",
-		expertYear: "14",
-		expertTwitter: "",
-		expertLinkedin: "",
-	},
-	{
-		expertName: "Reema Dubey",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
-		expertDescription:
-			"Miss Reema Dubey is a professional educator and an Indian Airforce recommended candidate. She also cracked several government examinations including UPSC prelims. Miss Dubey is not only a great strategist to crack Govt. Examination however she is also a great teacher who can help someone to crack the same.",
-		expertDescription2: "",
-		expertPosition: "Instructor",
-		expertDomain: "Education",
-		expertAOE: "Govt. service, AFCAT, UPSC, SSB and many more",
-		expertYear: "8",
-		expertTwitter: "",
-		expertLinkedin: "",
-	},
-];
+// const expertData = [
+// 	{
+// 		expertName: "Vikrant Biswal",
+// 		expertImg: "https://vinodg.me/Resources/broken.png",
+// 		expertDescription:
+// 			"There is a very thin line between literacy and education. Your 16-20 years of academics will be considered as meaningless if someone is unable use it for the betterment of self, society and the nation. Once someone know how to use his/her knowledge towards development the person will be considered as educated.",
+// 		expertDescription2:
+// 			"At Sandhan, we are not only committed however we brought highly skilled Industry experts as educators and mentors to help students to bridge the gap of skills provided by institute and required by organizations and to make them highly successful in careers by our various programs.",
+// 		expertPosition: "Co-founder and IIM Lucknow Alumni",
+// 		expertDomain: "Management",
+// 		expertAOE:
+// 			"Human resource, Training and development, Organization development, people management, Strategic management, skill upgradation and many more",
+// 		expertYear: "12",
+// 		expertTwitter: "",
+// 		expertLinkedin: "",
+// 	},
+// 	{
+// 		expertName: "Jitender Kumar",
+// 		expertImg: "https://vinodg.me/Resources/broken.png",
+// 		expertDescription:
+// 			"Mr. Kumar is merchant Navy professional, a hard core Engineer, a passionate entrepreneur and a great mentor. Graduated from Singapore maritime academy Mr. Kumar Worked with several International merchant navy companies like MERSK sea line and achieved epitome of career in a very short span of time.",
+// 		expertDescription2: "",
+// 		expertPosition: "Lead educator and Entrepreneur",
+// 		expertDomain: "Management",
+// 		expertAOE:
+// 			"Mechanical Engineering, Electrical engineering, Ship maintenance, Entrepreneurship and many more",
+// 		expertYear: "14",
+// 		expertTwitter: "",
+// 		expertLinkedin: "",
+// 	},
+// 	{
+// 		expertName: "Reema Dubey",
+// 		expertImg: "https://vinodg.me/Resources/broken.png",
+// 		expertDescription:
+// 			"Miss Reema Dubey is a professional educator and an Indian Airforce recommended candidate. She also cracked several government examinations including UPSC prelims. Miss Dubey is not only a great strategist to crack Govt. Examination however she is also a great teacher who can help someone to crack the same.",
+// 		expertDescription2: "",
+// 		expertPosition: "Instructor",
+// 		expertDomain: "Education",
+// 		expertAOE: "Govt. service, AFCAT, UPSC, SSB and many more",
+// 		expertYear: "8",
+// 		expertTwitter: "",
+// 		expertLinkedin: "",
+// 	},
+// ];
+var expertData = [];
+const aboutUsRef = fire.database().ref("aboutUs");
+
+aboutUsRef.on("value", (snapshot) => {
+	expertData = snapshot.val().meetTeam;
+});
 
 class AboutUs extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			aboutUsData: "",
+		};
+
+		this.expertData = [];
+	}
+
+	componentDidMount() {
+		const aboutUsRef = fire.database().ref("aboutUs");
+		aboutUsRef.on("value", (snapshot) => {
+			this.setState({ aboutUsData: snapshot.val() }, () => {});
+		});
+	}
+
 	render() {
 		return (
 			<>
@@ -96,7 +119,10 @@ class AboutUs extends React.Component {
 											}}
 										>
 											<ReactPlayer
-												url='https://www.dailymotion.com/video/x7v0jbw'
+												url={
+													this.state.aboutUsData
+														.kalamVideo
+												}
 												className='react-player'
 												playing
 												volume={50}

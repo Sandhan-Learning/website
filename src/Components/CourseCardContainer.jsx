@@ -2,6 +2,7 @@ import React from "react";
 import CourseCard from "./CourseCard";
 import Test from "./Test";
 import "./styles/course-card-container.css";
+import fire from "../firebaseIndex";
 
 import SwiperCore, {
 	Navigation,
@@ -80,6 +81,15 @@ const courseData = [
 		coursePrice: " ",
 	},
 ];
+
+// var courseData = [];
+
+// fire.database()
+// 	.ref("homeCoursesSlider")
+// 	.on("value", (snapshot) => {
+// 		courseData = snapshot.val();
+// 		console.log(courseData);
+// 	});
 
 class CourseCardContainer extends React.Component {
 	constructor() {

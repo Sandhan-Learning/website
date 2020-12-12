@@ -115,19 +115,8 @@ class OurVision extends React.Component {
 						<span class='title-bg'></span>
 						<h3>OUR VISION</h3>
 					</div>
-					<p>
-						A Complete education means when someone knows how to
-						utilize one’s mind, skills, thoughts, learnings and
-						dreams in a systematic manner so that he/she would not
-						be worried about unemployment and uncertainty of life &
-						Career.
-					</p>
-					<p>
-						In our flagship program we create a learning environment
-						where every individual develops professionally,
-						psychologically, economically and will be a valuable
-						asset to the organization, society and the Nation.
-					</p>
+					<p>{this.props.para1}</p>
+					<p>{this.props.para2}</p>
 					<Link to='/about' class='ghost-btn'>
 						<svg>
 							<defs>
@@ -146,7 +135,7 @@ class OurVision extends React.Component {
 								stroke='url(#grad1)'
 							></rect>
 						</svg>
-						<span>Learn More</span>
+						<span>{this.props.buttonText}</span>
 					</Link>
 				</div>
 			</section>
@@ -361,13 +350,9 @@ class Homepage extends React.Component {
 						<div class='container'>
 							<div class='row'>
 								<div class='col-12'>
-									<h4>JOIN US</h4>
+									<h4>{this.state.joinUsData.title}</h4>
 									<p class='mt-40'>
-										If you are a teacher or an Industry
-										expert and passionate about developing
-										nation through education and have
-										special skills that can help students,
-										Come be a part of Sandhan
+										{this.state.joinUsData.para}
 									</p>
 
 									<Link to='/career' class='ghost-btn'>
@@ -394,7 +379,9 @@ class Homepage extends React.Component {
 												stroke='#ffffff'
 											></rect>
 										</svg>
-										<span>JOIN US</span>
+										<span>
+											{this.state.joinUsData.buttonText}
+										</span>
 
 										<div id='fade'></div>
 									</Link>

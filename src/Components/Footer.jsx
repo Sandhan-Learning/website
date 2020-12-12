@@ -41,7 +41,9 @@ class Footer extends React.Component {
 									<img src={contact_icon01} alt='Image'></img>
 								</figure>
 								<h4>E-MAIL</h4>
-								<address>Education.sandhan@gmail.com</address>
+								<address>
+									{this.state.footerContactData.email}
+								</address>
 							</div>
 
 							<div class='col-lg-3 col-md-6'>
@@ -49,7 +51,9 @@ class Footer extends React.Component {
 									<img src={contact_icon02} alt='Image'></img>
 								</figure>
 								<h4>PHONE</h4>
-								<address>+91 7978349894</address>
+								<address>
+									{this.state.footerContactData.phone}
+								</address>
 							</div>
 
 							<div class='col-lg-3 col-md-6'>
@@ -57,7 +61,9 @@ class Footer extends React.Component {
 									<img src={contact_icon03} alt='Image'></img>
 								</figure>
 								<h4>SUPPORT</h4>
-								<address>Mon to Fri 09:00am to 04:00pm</address>
+								<address>
+									{this.state.footerContactData.time}
+								</address>
 							</div>
 
 							<div class='col-lg-3 col-md-6'>
@@ -66,7 +72,7 @@ class Footer extends React.Component {
 								</figure>
 								<h4>LOCATION</h4>
 								<address>
-									Arcon Heights, Gothapatna, BBSR{" "}
+									{this.state.footerContactData.location}
 								</address>
 							</div>
 						</div>
@@ -81,20 +87,16 @@ class Footer extends React.Component {
 									alt='Image'
 									class='logo'
 								></img>
-								<p>
-									Sandhan Learning is based on the principles
-									of Dr. APJ Abdul Kalam and dedicated towards
-									improvement <br></br>of education quality
-									and to start experimental learning among
-									youths for 100% development to make self
-									reliant India.
-								</p>
+								<p>{this.state.footerData.para}</p>
 
 								<ul>
 									<li>
 										<a
 											target='_blank'
-											href='https://m.facebook.com/Sandhanlearning/'
+											href={
+												this.state.footerData
+													.promoFacebook
+											}
 										>
 											<i class='fa fa-facebook fa-2x'></i>
 										</a>
@@ -102,7 +104,10 @@ class Footer extends React.Component {
 									<li>
 										<a
 											target='_blank'
-											href='https://www.youtube.com/channel/UCxqgTMdgK8pYiWqglhMFV3g?view_as=subscriber'
+											href={
+												this.state.footerData
+													.promoYoutube
+											}
 										>
 											<i class='fa fa-youtube fa-2x'></i>
 										</a>
@@ -110,7 +115,10 @@ class Footer extends React.Component {
 									<li>
 										<a
 											target='_blank'
-											href='https://t.me/sandhanlearning'
+											href={
+												this.state.footerData
+													.promoTelegram
+											}
 										>
 											<i class='fa fa-telegram fa-2x'></i>
 										</a>
@@ -118,7 +126,10 @@ class Footer extends React.Component {
 									<li>
 										<a
 											target='_blank'
-											href='https://instagram.com/sandhanlearnings?igshid=43la6q8yr0ey'
+											href={
+												this.state.footerData
+													.promoInstagram
+											}
 										>
 											<i class='fa fa-instagram fa-2x'></i>
 										</a>
@@ -126,7 +137,10 @@ class Footer extends React.Component {
 									<li>
 										<a
 											target='_blank'
-											href='https://www.linkedin.com/in/sandhan-education-056705184'
+											href={
+												this.state.footerData
+													.promoLinkedin
+											}
 										>
 											<i class='fa fa-linkedin fa-2x'></i>
 										</a>

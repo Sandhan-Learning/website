@@ -43,8 +43,8 @@ function App() {
 					<Route exact path='/career'>
 						<Career />
 					</Route>
-		                        <Route exact path='/knowmore'>
-						<Startup/>
+					<Route exact path='/knowmore'>
+						<Startup />
 					</Route>
 				</Switch>
 			</BrowserRouter>

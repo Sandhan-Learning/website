@@ -4,11 +4,12 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import team02 from "../images/Experts/team02.jpg";
 import main_illustration from "../images/Experts/illus.png";
+import fire from "../firebaseIndex";
 
 const expertData = [
 	{
 		expertName: "Vikrant Biswal",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
+		expertImg: "https://vinodg.me/Resources/broken.png",
 		expertDescription:
 			"Mr. Vikrant Biswal is the Co-founder, an IIM lucknow alumni and a lead educator at Sandhan learning. Specialized in many core management areas like Human resource management, recruitment, business strategies, marketing, corporate training and development, public speaking and innovation Mr. Biswal helped many Individuals, Startups and organizations to grow in a very short span of time.",
 		expertDescription2:
@@ -23,7 +24,7 @@ const expertData = [
 	},
 	{
 		expertName: "Jitender Kumar",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
+		expertImg: "https://vinodg.me/Resources/broken.png",
 		expertDescription:
 			"Mr. Kumar is merchant Navy professional, a hard core Engineer, a passionate entrepreneur and a great mentor. Graduated from Singapore maritime academy Mr. Kumar Worked with several International merchant navy companies like MERSK sea line and achieved epitome of career in a very short span of time.",
 		expertDescription2: "",
@@ -37,7 +38,7 @@ const expertData = [
 	},
 	{
 		expertName: "Reema Dubey",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
+		expertImg: "https://vinodg.me/Resources/broken.png",
 		expertDescription:
 			"Miss Reema Dubey is a professional educator and an Indian Airforce recommended candidate. She also cracked several government examinations including UPSC prelims. Miss Dubey is not only a great strategist to crack Govt. Examination however she is also a great teacher who can help someone to crack the same.",
 		expertDescription2: "",
@@ -50,7 +51,7 @@ const expertData = [
 	},
 	{
 		expertName: "Suman Kumar",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
+		expertImg: "https://vinodg.me/Resources/broken.png",
 		expertDescription:
 			"Mr. Suman Kumar is an award winning professional corporate trainer who have his expertise in Automobile Industry and have extreme knowledge about the Industry. Worked with several Automobile giants Mr. Kumar will help you to gain all the necessary knowledge and skills that Automobile Industry requires.",
 		expertDescription2: "",
@@ -64,7 +65,7 @@ const expertData = [
 	},
 	{
 		expertName: "Mr. Bhaskar Datta",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
+		expertImg: "https://vinodg.me/Resources/broken.png",
 		expertDescription:
 			"With an extensive 33 years of working experience in organization like TATA Motors, Mr Datta have some greatest achievement in the field of Automobile industry. He was one of the key stake person behind the operation of Asia’s biggest bus network “Delhi Transport Corporation”.",
 		expertDescription2: "",
@@ -78,7 +79,7 @@ const expertData = [
 	},
 	{
 		expertName: "Arunesh Bose",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
+		expertImg: "https://vinodg.me/Resources/broken.png",
 		expertDescription:
 			"Mr. Arunesh bose possess in depth technical knowledge of Indian Automobile sector and has catered many Automobile manufacturers including the largest automobile manufacturer in India.",
 		expertDescription2: "",
@@ -92,7 +93,7 @@ const expertData = [
 	},
 	{
 		expertName: "Kali Prasad Dubey",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
+		expertImg: "https://vinodg.me/Resources/broken.png",
 		expertDescription:
 			"Mr. Kali Prasad Dubey is an extremely talented emergency management Specialist, who worked with organizations like reliance petrochemicals &amp; TATA steels. When this Covid-19 emergency showed the world that how much emergency management is important, Mr. Dubey is an extremely reliable personal with Sandhan learning who will be helping students to explore the opportunities in emergency management.",
 		expertDescription2: "",
@@ -106,7 +107,7 @@ const expertData = [
 	},
 	{
 		expertName: "Mr. Radheshyam Yadav",
-		expertImg: "https://vinodg.me/Resources/16.jpg",
+		expertImg: "https://vinodg.me/Resources/broken.png",
 		expertDescription:
 			"An engineering Graduate from IIT Roorkee and a passionate teacher who gave his corporate life for the love of academics and teachings. Mr. Yadav have an experience of more than 20 years in academics and possess special skills in his teachings.",
 		expertDescription2: "",
@@ -121,6 +122,7 @@ const expertData = [
 
 class Experts extends React.Component {
 	render() {
+		console.log(expertData);
 		return (
 			<>
 				<Navbar
