@@ -1,3 +1,7 @@
+.testimonial-item {
+	border-radius: 10px;
+}
+
 .testimonial-item h1,
 h2,
 h3,
@@ -5,7 +9,7 @@ h4,
 h5 {
 	color: #3e3d3d;
 	font-weight: 100;
-	font-size: 3.4em;
+	font-size: 3em;
 	margin-bottom: 0.3em;
 	line-height: normal;
 }
@@ -27,11 +31,13 @@ h5 {
 }
 .testimonial-wrapper {
 	text-align: center;
+	position: relative;
+	margin-top: -1000px;
 }
 .testimonial-wrapper h2 {
 	font-weight: 700;
 	color: #fff;
-	font-size: 1.8rem;
+	font-size: 1.2rem;
 	padding: 10vh 10% 35vh;
 	background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 	text-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.2);
@@ -45,7 +51,7 @@ h5 {
 .testimonial-list {
 	background-color: #fff;
 	border-radius: 0.5rem;
-	margin: 0 auto 0;
+	/* margin: 0 auto 0; */
 	width: 55%;
 	box-shadow: 0 0.8rem 2rem -0.07rem rgba(0, 0, 0, 0.2);
 }
@@ -72,16 +78,19 @@ h5 {
 	left: 5rem;
 }
 .testimonial-item .heading {
-	font-size: 1.8rem;
-	color: #3e3d3d;
+	text-transform: uppercase;
+	color: #0f5af2;
+	margin-bottom: 10px;
 	font-weight: 700;
-	line-height: 1.2;
+	font-size: 30px;
 }
 .testimonial-item .para {
+	font-style: normal !important;
+	color: #192534;
 	font-weight: 400;
-	color: #7f7f7f;
-	font-size: 1rem;
 	line-height: 1.6;
+	font-family: "Poppins";
+	font-size: 14px;
 }
 .testimonial-item .testimonials-by {
 	text-align: right;
@@ -90,7 +99,7 @@ h5 {
 .testimonial-item .name {
 	font-weight: 700;
 	font-size: 1.25rem;
-	color: #7b7b7b;
+	color: #3e4b5b;
 	line-height: 1;
 	margin-bottom: 0.3rem;
 	margin-right: 5px;
@@ -98,9 +107,8 @@ h5 {
 }
 .testimonial-item .designation {
 	font-weight: 500;
-	font-size: 0.85rem;
+	font-size: 1rem;
 	color: #7f7f7f;
-	letter-spacing: 0.15rem;
 }
 .testimonial-item.selected em {
 	animation-name: loadFromBottom;

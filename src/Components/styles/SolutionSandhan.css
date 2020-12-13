@@ -1,0 +1,34 @@
+.solutionsandhan h1{
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 50px;
+    transform:none;
+    font-size: 32px;
+    text-transform:none;
+   /* padding-left: 20px;*/
+    padding-top: 50px;
+    text-transform: uppercase;
+
+}
+.solutionsandhan_para p{
+    font-weight: 500;
+    line-height: 2em;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    font-size: 15px;;
+
+}
+
+
+@media only screen and (max-width: 767px),
+	only screen and (max-device-width: 767px) {
+  .solutionsandhan_para p{
+            margin-left: 20px;
+            margin-right: 20px !important;
+            
+        }
+        .solutionsandhan h1{
+            font-size: 26px !important;
+        }
+    }

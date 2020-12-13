@@ -11,7 +11,7 @@ function Management() {/*
     return (
         <div className="management">
             <div  >
-                <img className="management_imgimg"/*style={managementImage}*/src={management} alt="Management_image" />
+                <img className="management_imgimg" /*style={managementImage}*/src={management} alt="Management_image" />
             </div>
             <div className="management_content">
                 <div >

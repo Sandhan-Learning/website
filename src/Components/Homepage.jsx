@@ -21,12 +21,18 @@ import tata_steel_logo from "../images/Logos/tata_steel.jpg";
 import tata_logo from "../images/Logos/tata.jpg";
 import indusind_logo from "../images/Logos/indusind.jpg";
 import vedanta_logo from "../images/Logos/vedanta.png";
+import hyundai_logo from "../images/Logos/hyundai.png";
+import ibm_logo from "../images/Logos/ibm.png";
+import infosys_logo from "../images/Logos/infosys.png";
+import volvo_logo from "../images/Logos/volvo.png";
+import hdfc_logo from "../images/Logos/hdfc.png";
+import iimlucknow_logo from "../images/Logos/iimlucknow.jpg";
 import Navbar from "./Navbar";
+import ShareBar from "./ShareBar";
 // import Modal from "./Modal";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import HomeSlider from "./HomeSlider";
-import ShareBar from "./ShareBar";
 
 class Header extends React.Component {
 	componentDidMount() {
@@ -111,12 +117,12 @@ class OurVision extends React.Component {
 					</div>
 					<p>{this.props.para1}</p>
 					<p>{this.props.para2}</p>
-					<a href='#' class='ghost-btn'>
+					<Link to='/about' class='ghost-btn'>
 						<svg>
 							<defs>
 								<linearGradient id='grad1'>
-									<stop offset='0%' stop-color='#FF8282' />
-									<stop offset='100%' stop-color='#E178ED' />
+									<stop offset='0%' stop-color='#1488cc' />
+									<stop offset='100%' stop-color='#2b32b2' />
 								</linearGradient>
 							</defs>
 							<rect
@@ -130,7 +136,7 @@ class OurVision extends React.Component {
 							></rect>
 						</svg>
 						<span>{this.props.buttonText}</span>
-					</a>
+					</Link>
 				</div>
 			</section>
 		);
@@ -140,7 +146,7 @@ class OurVision extends React.Component {
 class OurUniqueness extends React.Component {
 	render() {
 		return (
-			<section className="uniqueness_section">
+			<section className='uniqueness_section'>
 				<div style={{ paddingTop: "50px" }}>
 					<h3 className='unique'>OUR UNIQUENESS</h3>
 					<div>
@@ -151,6 +157,7 @@ class OurUniqueness extends React.Component {
 		);
 	}
 }
+
 class OurCourses extends React.Component {
 	render() {
 		return (
@@ -180,9 +187,15 @@ class CoachesFrom extends React.Component {
 						<div class='col-12'>
 							<div class='titles'>
 								<span class='title-bg'></span>
-								<h3>Our experts coaches are from</h3>
+								<h3>Our expert coaches are from</h3>
 							</div>
 							<ul>
+								<li>
+									<img
+										src={iimlucknow_logo}
+										alt='Image'
+									></img>
+								</li>
 								<li>
 									<img
 										src={ashok_leyland_logo}
@@ -194,6 +207,21 @@ class CoachesFrom extends React.Component {
 								</li>
 								<li>
 									<img src={hero_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img src={hyundai_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img src={ibm_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img src={infosys_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img src={volvo_logo} alt='Image'></img>
+								</li>
+								<li>
+									<img src={hdfc_logo} alt='Image'></img>
 								</li>
 								<li>
 									<img src={icici_logo} alt='Image'></img>
@@ -243,13 +271,15 @@ class CoachesFrom extends React.Component {
 class HomepageTestimonials extends React.Component {
 	render() {
 		return (
-			<section class='main-features'>
-				<div class='container'>
-					<div class='titles'>
-						<span class='title-bg'></span>
-						<h3>TESTIMONIALS</h3>
+			<section class='main-features testimonial-section'>
+				<div class='white-blob-wrap'>
+					<div class='container' style={{ paddingBottom: "40px" }}>
+						<div class='titles'>
+							<span class='title-bg'></span>
+							<h3>TESTIMONIALS</h3>
+						</div>
+						<TestimonialCardContainer />
 					</div>
-					<TestimonialCardContainer />
 				</div>
 			</section>
 		);
@@ -296,16 +326,6 @@ class Homepage extends React.Component {
 						videobg={<></>}
 						inner={
 							<>
-								<div id='light'>
-									<a class='boxclose' id='boxclose'></a>
-									<video id='Video' width='900px'>
-										<source
-											src='https://www.googleapis.com/drive/v3/files/1pv2bnhYCQPluu24_54p7HHxW6x3hSNZe?alt=media&key=AIzaSyAuT4romdlgsj6PUHK2xoijJc2QU7NDyKk'
-											type='video/mp4'
-										></source>
-									</video>
-								</div>
-									<div className="socialMedias"><ShareBar/></div>
 								<HomeSlider />
 							</>
 						}
@@ -316,19 +336,26 @@ class Homepage extends React.Component {
 						buttonText={this.state.ourVisionData.buttonText}
 					/>
 					<OurUniqueness />
-					<Accordion />
+
 					<OurCourses />
 					<CoachesFrom />
-					<HomepageTestimonials />
 
+					<Accordion />
+
+					<HomepageTestimonials />
+					<div className='socialMedias'>
+						<ShareBar />
+					</div>
 					<section class='quote-bar'>
 						<div class='container'>
 							<div class='row'>
 								<div class='col-12'>
 									<h4>{this.state.joinUsData.title}</h4>
-									<p>{this.state.joinUsData.para}</p>
+									<p class='mt-40'>
+										{this.state.joinUsData.para}
+									</p>
 
-									<a href='#' class='ghost-btn vidButton'>
+									<Link to='/career' class='ghost-btn'>
 										<svg>
 											<defs>
 												<linearGradient>
@@ -357,7 +384,7 @@ class Homepage extends React.Component {
 										</span>
 
 										<div id='fade'></div>
-									</a>
+									</Link>
 								</div>
 							</div>
 						</div>

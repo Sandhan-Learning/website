@@ -1,0 +1,43 @@
+.management{
+    display: flex;
+    margin-top: 50px;
+    font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-size: 17px;
+    letter-spacing: -0.003em;
+    line-height: 30px;
+}
+.management_content{
+    margin-left:100px;
+    margin-right: 50px;
+    
+}
+.management h3{
+    font-size: 1.75rem;
+}
+.management p{
+    font-size: 1em;
+}
+.management_gap{
+    margin-top: 20px;
+}
+@media screen and (max-width: 1000px) {
+    .management{
+        display: flex;
+        flex-direction: column;
+    }
+    .management_imgimg{
+        margin-top: 50px !important;
+        height:40vh !important;
+        margin-left: 50% !important;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+   
+}
+.management_imgimg {
+       margin-top:-232px;
+        margin-left:20px;
+        height:140vh;
+        object-fit: unset;
+
+}
